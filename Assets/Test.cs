@@ -24,8 +24,12 @@ public class Test : MonoBehaviour
         //var list = RotateMatrix.Rotate(matrix1);
         //PrintList(list);
         //PrintList(RotateMatrix.Rotate(matrix2));
-        arr = new[] { 1, 2, 3, 4, 5 };
-        RotateArray.Rotate(arr,2);
+       ListNode listNode=new ListNode(1);
+        listNode.next=new ListNode(2);
+        listNode.next=new ListNode(3);
+        listNode.next=new ListNode(4);
+        listNode.next=new ListNode(5);
+        Debug.Log(ReverseLinkList.ReverseBetween(listNode,1,4).ToStr());
        
     }
 
