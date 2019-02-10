@@ -6,13 +6,13 @@ public class RotateMatrix {
     /// <summary>
     /// 按顺时针遍历矩阵，返回一个列表
     /// </summary>
-    /// <param name="matirx"></param>
+    /// <param name="matrix"></param>
     /// <returns></returns>
-    public static List<int> Rotate(int[,] matirx)
+    public static List<int> SpiralOrder(int[,] matrix)
     {
         List<int> resultList = new List<int>();
-        int rowCount = matirx.GetLength(0);
-        int colCount = matirx.GetLength(1);
+        int rowCount = matrix.GetLength(0);
+        int colCount = matrix.GetLength(1);
         int direction = 0;
         int rowSteps = rowCount;
         int colSteps = colCount;
@@ -29,7 +29,7 @@ public class RotateMatrix {
                         for(int i = 0; i < colSteps; i++)
                         {
                             colIndex++;
-                            resultList.Add(matirx[rowIndex, colIndex]);
+                            resultList.Add(matrix[rowIndex, colIndex]);
                         }
                         rowSteps--;
                         break;
@@ -39,7 +39,7 @@ public class RotateMatrix {
                         for (int i = 0; i < rowSteps; i++)
                         {
                             rowIndex++;
-                            resultList.Add(matirx[rowIndex, colIndex]);
+                            resultList.Add(matrix[rowIndex, colIndex]);
                         }
                         colSteps--;
                         break;
@@ -49,7 +49,7 @@ public class RotateMatrix {
                         for (int i = 0; i < colSteps; i++)
                         {
                             colIndex--;
-                            resultList.Add(matirx[rowIndex, colIndex]);
+                            resultList.Add(matrix[rowIndex, colIndex]);
                         }
                         rowSteps--;
                         
@@ -60,7 +60,7 @@ public class RotateMatrix {
                         for (int i = 0; i < rowSteps; i++)
                         {
                             rowIndex--;
-                            resultList.Add(matirx[rowIndex, colIndex]);
+                            resultList.Add(matrix[rowIndex, colIndex]);
                         }
                         colSteps--;
                         break;

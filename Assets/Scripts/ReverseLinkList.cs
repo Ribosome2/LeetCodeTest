@@ -6,49 +6,79 @@ public class ReverseLinkList  {
 
     public static ListNode ReverseBetween(ListNode head, int m, int n)
     {
-        if (m == n)
+        if (head == null || head.next == null || m==n)
         {
             return head;
         }
+        
         ListNode curNode = head;
-        int index = 0;
-        int firstIndex = m - 1; //M前面的一个的索引
+        ListNode reverseHead = null;
+        ListNode pre = null;
+        ListNode next = null;
         ListNode startNode = null;
-        ListNode tempNode = null;
-        ListNode nextNode = curNode.next;
+        int index = 0;
         
         while (curNode!=null)
         {
             index++;
-            if (index > n)
+            if (index == m - 1)
             {
-                curNode = null;
-                break;
-            }else if (index == firstIndex)
+                reverseHead = curNode;
+            }
+            if (index == m)
             {
                 startNode = curNode;
-            }
-            else if (index >= m && index < n)
-            {
-                if (nextNode != null)
-                {
-                    tempNode = nextNode.next;
-                    nextNode.next = curNode;
-                }
-               
-                if (index == (n-1))
-                {
-                    if (startNode != null) //有前置节点，说明不是从头开始，需要接上
-                    {
-                        startNode.next = curNode;
-                    }
-                }
-                nextNode = nextNode.next;
-                curNode = tempNode;
-                continue;
+                pre = curNode;
+                next = curNode.next;
+                break;
             }
             curNode = curNode.next;
         }
-        return head;
+
+        while (next != null && index<n)
+        {
+            ListNode temp = null;
+            temp = next.next;
+            next.next = pre;
+            pre = next;
+            next = temp;
+            index++;
+        }
+
+       
+        startNode.next = next;
+
+        if (reverseHead != null)
+        {
+            reverseHead.next = pre;
+            return head;
+        }
+        else
+        {
+            return pre;
+        }
+    }
+
+    public static ListNode ReverseList(ListNode head)
+    {
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
+
+        var pre = head;
+        var next = head.next;
+        pre.next = null;
+      
+        while ( next!=null)
+        {
+            ListNode temp = null;
+            temp = next.next;
+            next.next = pre;
+            pre = next;
+            next = temp;
+        }
+
+        return pre;
     }
 }
