@@ -25,11 +25,12 @@ public class Test : MonoBehaviour
         //PrintList(list);
         //PrintList(RotateMatrix.Rotate(matrix2));
        ListNode listNode=new ListNode(1);
-        listNode.next=new ListNode(2);
-        listNode.next.next=new ListNode(3);
-        listNode.next.next.next=new ListNode(4);
-        listNode.next.next.next.next=new ListNode(5);
-        Debug.Log(ReverseLinkList.ReverseBetween(listNode,1,5).ToStr());
+        var node2=listNode.next=new ListNode(2);
+        var node3=listNode.next.next=new ListNode(3);
+        var node4=listNode.next.next.next=new ListNode(4);
+        var node5= listNode.next.next.next.next = new ListNode(5);
+//        node5.next = node2;
+        Debug.Log(IsCycleLinkList.HasCycle(listNode));
        
     }
 
