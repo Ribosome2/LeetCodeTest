@@ -234,6 +234,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\IsCycleLinkList.cs" />
     <Compile Include="Assets\Scripts\LinkListMerge.cs" />
+    <Compile Include="Assets\Scripts\LongestCommonPrefix.cs" />
+    <Compile Include="Assets\Scripts\RemoveDuplicateArrElement.cs" />
     <Compile Include="Assets\Scripts\ReverseLinkList.cs" />
     <Compile Include="Assets\Scripts\RotatekArray.cs" />
     <Compile Include="Assets\Scripts\RotateMatrix.cs" />
