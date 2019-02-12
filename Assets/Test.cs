@@ -30,7 +30,7 @@ public class Test : MonoBehaviour
         var node4=listNode.next.next.next=new ListNode(4);
         var node5= listNode.next.next.next.next = new ListNode(5);
 //        node5.next = node2;
-        Debug.Log(StrFindNeedleInHaystack.StrStr("mississippi","issip"));
+        Debug.Log(ArraySearchInsert.SearchInsert(new int[]{1,3,5,6},0 ));
        
     }
 

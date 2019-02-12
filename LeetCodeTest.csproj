@@ -232,6 +232,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ArraySearchInsert.cs" />
+    <Compile Include="Assets\Scripts\IsBracketsValid.cs" />
     <Compile Include="Assets\Scripts\IsCycleLinkList.cs" />
     <Compile Include="Assets\Scripts\LinkListMerge.cs" />
     <Compile Include="Assets\Scripts\LongestCommonPrefix.cs" />
