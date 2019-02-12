@@ -30,8 +30,15 @@ public class Test : MonoBehaviour
         var node4=listNode.next.next.next=new ListNode(4);
         var node5= listNode.next.next.next.next = new ListNode(5);
 //        node5.next = node2;
-        Debug.Log(ArraySearchInsert.SearchInsert(new int[]{1,3,5,6},0 ));
-       
+       MinStack minStack=new MinStack();
+        minStack.Push(-2);
+        minStack.Push(0);
+        minStack.Push(-3);
+        Debug.Log("GetMin  "+minStack.GetMin());
+        minStack.Pop();
+        Debug.Log("Top "+minStack.Top());
+        Debug.Log("GetMin"+minStack.GetMin());
+
     }
 
    

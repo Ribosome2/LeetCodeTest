@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.4.3f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -233,10 +235,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ArraySearchInsert.cs" />
+    <Compile Include="Assets\Scripts\ClimbStairsTry.cs" />
     <Compile Include="Assets\Scripts\IsBracketsValid.cs" />
     <Compile Include="Assets\Scripts\IsCycleLinkList.cs" />
     <Compile Include="Assets\Scripts\LinkListMerge.cs" />
     <Compile Include="Assets\Scripts\LongestCommonPrefix.cs" />
+    <Compile Include="Assets\Scripts\MaxTreeDepth.cs" />
+    <Compile Include="Assets\Scripts\MinStack.cs" />
+    <Compile Include="Assets\Scripts\MinTreeDepth.cs" />
     <Compile Include="Assets\Scripts\RemoveDuplicateArrElement.cs" />
     <Compile Include="Assets\Scripts\ReverseInt.cs" />
     <Compile Include="Assets\Scripts\ReverseLinkList.cs" />
