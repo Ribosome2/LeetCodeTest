@@ -249,6 +249,7 @@
     <Compile Include="Assets\Scripts\RotatekArray.cs" />
     <Compile Include="Assets\Scripts\RotateMatrix.cs" />
     <Compile Include="Assets\Scripts\StrFindNeedleInHaystack.cs" />
+    <Compile Include="Assets\Scripts\TreeLevelOrder.cs" />
     <Compile Include="Assets\Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

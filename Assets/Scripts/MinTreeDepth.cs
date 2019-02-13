@@ -14,35 +14,24 @@ namespace Assets.Scripts
             {
                 return 0;
             }
-          
-            return GetMinNodeDepth(root, 0);
-        }
 
-        int GetMinNodeDepth(TreeNode node, int curDepth)
-        {
-            if (node == null)
+            if (root.left == null && root.right == null)
             {
-                return  curDepth;
-            }
-
-            curDepth++;
-
-            if (node.left == null &&  node.right == null)
+                return 1;
+            }else if (root.left == null && root.right != null)
             {
-                return curDepth;
-            }
-
-            int leftDepth = GetMinNodeDepth(node.left, curDepth); ;
-            int rightDepth = GetMinNodeDepth(node.right, curDepth); ;
-
-            if (leftDepth > rightDepth)
+                return MinDepth(root.right) + 1;
+            }else if (root.left != null && root.right == null)
             {
-                return leftDepth;
-            }
-            else
+                return MinDepth(root.left) + 1;
+            }else //  (root.left != null && root.right != null)
             {
-                return rightDepth;
+                int left = MinDepth(root.left) + 1;
+                int right = MinDepth(root.right) + 1;
+                return  left < right?left : right;
             }
         }
+
+       
     }
 }
