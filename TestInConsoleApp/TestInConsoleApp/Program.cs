@@ -10,12 +10,13 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            ListNode node=new ListNode(1);
-            var node2=node.next=new ListNode(2);
-            var node3=node.next.next=new ListNode(3);
-            var node4=node.next.next.next=new ListNode(4);
-            LinkListRemoveElement.DeleteNode(node4);
-            Console.WriteLine(node.ToStr());
+            int loopCount = 1000;
+            LinkedList<string> linkedList=new LinkedList<string>(); 
+            for (int i = 0; i < loopCount; i++)
+            {
+                linkedList.AddLast("LongStrddddddddddddddddddddddddddddddddddddddddddd");
+            }
+            var str=linkedList.ToString();
             Console.Read();
         }
     }

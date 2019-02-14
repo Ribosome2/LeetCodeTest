@@ -64,6 +64,7 @@
     <Compile Include="RotatekArray.cs" />
     <Compile Include="RotateMatrix.cs" />
     <Compile Include="StrFindNeedleInHaystack.cs" />
+    <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="TreeLevelOrder.cs" />
   </ItemGroup>
   <ItemGroup>
