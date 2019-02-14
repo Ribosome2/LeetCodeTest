@@ -10,7 +10,12 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("DDDDDDDD");
+            ListNode node=new ListNode(1);
+            var node2=node.next=new ListNode(2);
+            var node3=node.next.next=new ListNode(3);
+            var node4=node.next.next.next=new ListNode(4);
+            LinkListRemoveElement.DeleteNode(node4);
+            Console.WriteLine(node.ToStr());
             Console.Read();
         }
     }
