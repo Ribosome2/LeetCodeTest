@@ -10,7 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            
+            BinaryMath math=new BinaryMath();
+            Console.WriteLine(math.addBinary("11", "1"));
             Console.Read();
         }
     }

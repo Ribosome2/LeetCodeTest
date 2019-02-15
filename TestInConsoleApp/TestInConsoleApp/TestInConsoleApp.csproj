@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArraySearchInsert.cs" />
+    <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
