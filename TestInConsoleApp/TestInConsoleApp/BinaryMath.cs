@@ -23,7 +23,7 @@ namespace TestInConsoleApp
                 strShort = a;
             }
             int temp=0;
-            LinkedList<char> numLinkedList=new LinkedList<char>();
+            StringBuilder sb = new StringBuilder();
             //用十进制立竖式的方法去算
             for (int i = 0; i < strLong.Length; i++)
             {
@@ -46,17 +46,17 @@ namespace TestInConsoleApp
                     switch (sum)
                     {
                         case 0:
-                            numLinkedList.AddFirst('0');
+                            sb.Insert(0,'0');
                             break;
                         case 1:
-                            numLinkedList.AddFirst('1');
+                            sb.Insert(0, '1');
                             break;
                         case 2:
-                            numLinkedList.AddFirst('0');
+                            sb.Insert(0, '0');
                             temp = 1;
                             break;
                         case 3:
-                            numLinkedList.AddFirst('1');
+                            sb.Insert(0, '1');
                             temp = 1;
                             break;
                     }
@@ -69,32 +69,25 @@ namespace TestInConsoleApp
                     {
                         if (num == '1')
                         {
-                            numLinkedList.AddFirst('0');
+                            sb.Insert(0, '0');
                             temp = 1;
                         }
                         else
                         {
-                            numLinkedList.AddFirst('1');
+                            sb.Insert(0, '1');
                             temp = 0;
                         }
                     }
                     else
                     {
-                        numLinkedList.AddFirst(num);
+                        sb.Insert(0, num);
                     }
                 }
               
             }
             if (temp > 0)
             {
-                numLinkedList.AddFirst('1');
-            }
-            StringBuilder sb=new StringBuilder();
-            var node = numLinkedList.First;
-            while (node!=null)
-            {
-                sb.Append( node.Value);
-                node = node.Next;
+                sb.Insert(0, '1');
             }
             
             return sb.ToString();
