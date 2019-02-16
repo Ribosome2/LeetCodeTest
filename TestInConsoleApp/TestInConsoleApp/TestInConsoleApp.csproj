@@ -63,6 +63,7 @@
     <Compile Include="RemoveDuplicateArrElement.cs" />
     <Compile Include="ReverseInt.cs" />
     <Compile Include="ReverseLinkList.cs" />
+    <Compile Include="RomanStrToInt.cs" />
     <Compile Include="RotatekArray.cs" />
     <Compile Include="RotateMatrix.cs" />
     <Compile Include="StrFindNeedleInHaystack.cs" />
