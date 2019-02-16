@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace TestInConsoleApp
 {
@@ -91,6 +92,48 @@ namespace TestInConsoleApp
                 }
             }
             return num;
+        }
+
+        struct RomanSymbol
+        {
+            public string Str;
+            public int value;
+        }
+        private static RomanSymbol[] SymbolArr = new RomanSymbol[13]
+        {
+            new  RomanSymbol{Str = "M",value = 1000},
+            new  RomanSymbol{Str = "CM",value = 900},
+            new  RomanSymbol{Str = "D",value = 500},
+            new  RomanSymbol{Str = "CD",value = 400},
+            new  RomanSymbol{Str = "C",value = 100},
+            new  RomanSymbol{Str = "XC",value = 90},
+            new  RomanSymbol{Str = "L",value = 50},
+            new  RomanSymbol{Str = "XL",value = 40},
+            new  RomanSymbol{Str = "X",value = 10},
+            new  RomanSymbol{Str = "IX",value = 9},
+            new  RomanSymbol{Str = "V",value = 5},
+            new  RomanSymbol{Str = "IV",value = 4},
+            new  RomanSymbol{Str = "I",value = 1},
+        };
+       
+
+        public string IntToRoman(int num)
+        {
+            StringBuilder sb=new StringBuilder();
+            while (num>0)
+            {
+                for (int i = 0; i < SymbolArr.Length; i++)
+                {
+                    if (num >= SymbolArr[i].value)
+                    {
+                        sb.Append(SymbolArr[i].Str);
+                        num -= SymbolArr[i].value;
+                        break;
+                    }
+                }
+            }
+            return sb.ToString();
+
         }
     }
 }
