@@ -69,6 +69,7 @@
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="TreeLevelOrder.cs" />
+    <Compile Include="Tree_IsSymmetric.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
