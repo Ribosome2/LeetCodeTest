@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArraySearchInsert.cs" />
+    <Compile Include="Array_FindMissinNumber.cs" />
     <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />
+    <Compile Include="LinkList_RemoveDuplicate.cs" />
     <Compile Include="LongestCommonPrefix.cs" />
     <Compile Include="MatrixTranspose.cs" />
     <Compile Include="MaxTreeDepth.cs" />
