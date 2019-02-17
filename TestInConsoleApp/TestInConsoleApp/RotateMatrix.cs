@@ -72,7 +72,7 @@ public class RotateMatrix {
 
     //给定一个 n × n 的二维矩阵表示一个图像 将图像顺时针旋转 90 度。
     //你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵
-    public void Rotate(int[,] matrix)
+    public void Rotate1(int[,] matrix)
     {
         //思路:假如是2x2的矩阵{{1，2}{3，4}}，旋转的过程可以表现为:
         //保存1到临时变量-> 3覆盖1-> 4覆盖3->2覆盖4 临时变量覆盖2
@@ -107,6 +107,25 @@ public class RotateMatrix {
             buttom--;
             //每一次循环正方形半径小2 （上下左右一圈）
             curSqureSize -= 2;
+        }
+    }
+
+    //跟前面的一样的思路，不过代码更简洁
+    public void Rotate2(int[,] matrix)
+    {
+        int len = matrix.GetLength(1);
+        for (int i = 0; i < len / 2; i++)
+        {
+            int start = i;
+            int end = len - i - 1;
+            for (int j = 0; j < end - start; j++)
+            {
+                int temp = matrix[start,start + j];
+                matrix[start,start + j] = matrix[end - j,start];
+                matrix[end - j,start] = matrix[end,end - j];
+                matrix[end,end - j] = matrix[start + j,end];
+                matrix[start + j,end] = temp;
+            }
         }
     }
 
