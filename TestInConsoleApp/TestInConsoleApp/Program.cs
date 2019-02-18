@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            LinkList_RemoveNthFromEnd test=new LinkList_RemoveNthFromEnd();
-           
+            Int_PlusOne test=new Int_PlusOne();
+            test.PlusOne(new int[] {9, 9});
             Console.Read();
         }
     }

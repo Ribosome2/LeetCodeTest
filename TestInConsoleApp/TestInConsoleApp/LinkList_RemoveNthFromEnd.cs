@@ -2,7 +2,6 @@
 {
     public class LinkList_RemoveNthFromEnd
     {
-//        给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
         public ListNode RemoveNthFromEnd(ListNode head, int n)
         {
             ListNode fast = head, slow = head;
