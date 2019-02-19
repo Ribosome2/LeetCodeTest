@@ -50,8 +50,11 @@
     <Compile Include="ClimbStairsTry.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
+    <Compile Include="GenerateTowerTriangle.cs" />
+    <Compile Include="Int_MySqrt.cs" />
     <Compile Include="Int_PlusOne.cs" />
     <Compile Include="IsBracketsValid.cs" />
+    <Compile Include="IsCanWinNim.cs" />
     <Compile Include="IsCycleLinkList.cs" />
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="LinkListMerge.cs" />
