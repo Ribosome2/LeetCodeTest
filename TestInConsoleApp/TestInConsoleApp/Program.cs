@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new GenerateTowerTriangle();
-            Console.WriteLine(test.Generate(5));
+            var test=new Str_IsPalindrome();
+            Console.WriteLine(test.IsPalindrome("A man, a plan, a canal: Panama"));
             Console.Read();
         }
     }

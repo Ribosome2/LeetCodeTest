@@ -7,11 +7,6 @@ namespace TestInConsoleApp
         //看不懂题目，只是不想留着这道题
         public string CountAndSay(int n)
         {
-            //            Dictionary<int, string> dict = new Dictionary<int, string>()
-            //            {
-            //                {1,"kkk" },
-            //                {2,"111" }
-            //            };
             Dictionary<int, string> dict = new Dictionary<int, string>()
             {
                 {1, "1"},

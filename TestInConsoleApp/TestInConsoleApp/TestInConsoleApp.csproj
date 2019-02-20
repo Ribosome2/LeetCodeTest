@@ -76,6 +76,8 @@
     <Compile Include="RotateMatrix.cs" />
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
+    <Compile Include="Str_CountAndSay.cs" />
+    <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
   </ItemGroup>
