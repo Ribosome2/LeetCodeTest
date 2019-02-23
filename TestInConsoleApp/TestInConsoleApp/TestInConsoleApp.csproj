@@ -77,6 +77,7 @@
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_CountAndSay.cs" />
+    <Compile Include="Str_IsIsomorphic.cs" />
     <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="Str_WordPattern.cs" />
     <Compile Include="TreeLevelOrder.cs" />
