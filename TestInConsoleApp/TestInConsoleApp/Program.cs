@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Str_IsPalindrome();
-            Console.WriteLine(test.IsPalindrome("A man, a plan, a canal: Panama"));
+            var test=new Str_WordPattern();
+            Console.WriteLine(test.WordPattern("abba","dog dog dog dog"));
             Console.Read();
         }
     }
