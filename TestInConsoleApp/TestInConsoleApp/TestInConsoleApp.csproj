@@ -51,6 +51,7 @@
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
+    <Compile Include="Int_IsPowerOfThree.cs" />
     <Compile Include="Int_MySqrt.cs" />
     <Compile Include="Int_PlusOne.cs" />
     <Compile Include="IsBracketsValid.cs" />
