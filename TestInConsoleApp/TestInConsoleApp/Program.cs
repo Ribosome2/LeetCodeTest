@@ -10,13 +10,15 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            var test=new Array_MergeTowArray();;
-           test.Merge(new int[]{1,2,3,0,0,0},3,new int[]{2,5,6}, 3);
-=======
-            var test=new Str_WordPattern();
-            Console.WriteLine(test.WordPattern("abba","dog dog dog dog"));
->>>>>>> 1ab2d1c097d2bf9080523e30f1582adcbb72e186
+            var test=new Array_RottingOrange();
+            var arr =new int[][]
+            {
+                new int[] {2, 1, 1},
+                new int[] {1, 1, 0},
+                new int[] {0, 1, 1},
+            };
+            Console.WriteLine(test.OrangesRotting(arr));
+           
             Console.Read();
         }
     }

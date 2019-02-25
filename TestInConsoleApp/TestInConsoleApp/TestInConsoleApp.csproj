@@ -47,6 +47,7 @@
     <Compile Include="Array_FindMissinNumber.cs" />
     <Compile Include="Array_MergeTowArray.cs" />
     <Compile Include="Array_MoveZeros.cs" />
+    <Compile Include="Array_RottingOrange.cs" />
     <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
