@@ -54,6 +54,7 @@
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
+    <Compile Include="Int_GuessNum.cs" />
     <Compile Include="Int_MySqrt.cs" />
     <Compile Include="Int_PlusOne.cs" />
     <Compile Include="IsBracketsValid.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="MinTreeDepth.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queque_TwoQuequeAsStack.cs" />
     <Compile Include="RemoveDuplicateArrElement.cs" />
     <Compile Include="ReverseInt.cs" />
     <Compile Include="ReverseLinkList.cs" />
