@@ -10,14 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Array_RottingOrange();
-            var arr =new int[][]
-            {
-                new int[] {2, 1, 1},
-                new int[] {1, 1, 0},
-                new int[] {0, 1, 1},
-            };
-            Console.WriteLine(test.OrangesRotting(arr));
+            var test=new Int_ExcelTitleToNumber();
+            Console.WriteLine(test.TitleToNumber("AB"));
            
             Console.Read();
         }
