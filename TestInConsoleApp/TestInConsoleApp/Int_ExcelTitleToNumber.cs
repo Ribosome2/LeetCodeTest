@@ -28,5 +28,19 @@
             }
             return num;
         }
+        public int TitleToNumber1(string s)
+        {
+            //其实就是26进制转10进制的问题
+            int num = 0;
+            int b = 1;
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                //A-Z (65-90)
+                var chaNum = s[i] - 64;
+                num=num+chaNum * b;
+                b = 26 * b;
+            }
+            return num;
+        }
     }
 }
