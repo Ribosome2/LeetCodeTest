@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Str_IsPalindrome();
-            Console.WriteLine(test.IsPalindrome("A man, a plan, a canal: Panama"));
+            var test=new Array_MergeTowArray();;
+           test.Merge(new int[]{1,2,3,0,0,0},3,new int[]{2,5,6}, 3);
             Console.Read();
         }
     }

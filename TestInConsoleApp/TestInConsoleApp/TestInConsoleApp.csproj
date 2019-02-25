@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ArraySearchInsert.cs" />
     <Compile Include="Array_FindMissinNumber.cs" />
+    <Compile Include="Array_MergeTowArray.cs" />
     <Compile Include="Array_MoveZeros.cs" />
     <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_CountAndSay.cs" />
     <Compile Include="Str_IsPalindrome.cs" />
+    <Compile Include="Str_LengthOfLastWord.cs" />
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
   </ItemGroup>
