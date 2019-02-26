@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Int_ExcelTitleToNumber();
-            Console.WriteLine(test.TitleToNumber("AB"));
+            var test=new Str_FirstUniqueChar();
+            Console.WriteLine(test.FirstUniqChar("cc"));
            
             Console.Read();
         }

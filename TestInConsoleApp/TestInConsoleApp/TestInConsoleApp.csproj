@@ -82,8 +82,10 @@
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_CountAndSay.cs" />
+    <Compile Include="Str_FirstUniqueChar.cs" />
     <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="Str_LengthOfLastWord.cs" />
+    <Compile Include="Str_ReverseChaArray.cs" />
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
   </ItemGroup>

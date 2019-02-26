@@ -1,4 +1,6 @@
-﻿namespace TestInConsoleApp
+﻿using System.Text;
+
+namespace TestInConsoleApp
 {
     public class Int_ExcelTitleToNumber
     {
@@ -41,6 +43,19 @@
                 b = 26 * b;
             }
             return num;
+        }
+//        给定一个正整数，返回它在 Excel 表中相对应的列名称。
+        public string ConvertToTitle(int n)
+        {
+            StringBuilder sb=new StringBuilder();
+            while (n>0)
+            {
+                int num = n % 27;
+                n = n / 26;
+                char c = (char)(num + 64);
+                sb.Insert(0, c);
+            }
+            return sb.ToString();
         }
     }
 }
