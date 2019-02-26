@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Int_GuessNum();
-            Console.WriteLine(test.guessNumber(2));
+            var test=new Int_InHappyNumber();
+            Console.WriteLine(test.IsHappy(19));
            
             Console.Read();
         }
