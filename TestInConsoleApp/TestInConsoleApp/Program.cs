@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Str_FirstUniqueChar();
-            Console.WriteLine(test.FirstUniqChar("cc"));
+            var test=new Int_GuessNum();
+            Console.WriteLine(test.guessNumber(2));
            
             Console.Read();
         }

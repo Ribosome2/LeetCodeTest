@@ -7,9 +7,20 @@
         //-1 : 我的数字比较小
         //1 : 我的数字比较大
         //0 : 恭喜！你猜对了！
-        public int guess(int num)
+        private int guess(int num)
         {
-            return 0;
+            int MyNum=2;
+            if (MyNum == num)
+            {
+                return 0;
+            }else if (MyNum < num)
+            {
+                return -1;
+            }
+            else
+            {
+                return 1;
+            }
         }
         public int guessNumber(int n)
         {
@@ -22,13 +33,13 @@
                 if ( re== 0)
                 {
                     return mid;
-                }else if (re == -1)
+                }else if (re == 1) //大了
                 {
-                    left = mid;
+                    left = mid+1;
                 }
                 else
                 {
-                    right = mid;
+                    right = mid-1;
                 }
             }
 
