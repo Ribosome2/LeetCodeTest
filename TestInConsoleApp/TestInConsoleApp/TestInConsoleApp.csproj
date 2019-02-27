@@ -53,6 +53,7 @@
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
+    <Compile Include="Int_AddDigits.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
     <Compile Include="Int_GuessNum.cs" />
     <Compile Include="Int_HammingWeight.cs" />
@@ -84,12 +85,14 @@
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_CountAndSay.cs" />
+    <Compile Include="Str_FindTheDifference.cs" />
     <Compile Include="Str_FirstUniqueChar.cs" />
     <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="Str_LengthOfLastWord.cs" />
     <Compile Include="Str_ReverseChaArray.cs" />
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
+    <Compile Include="Tree_SortedArrayToBST.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

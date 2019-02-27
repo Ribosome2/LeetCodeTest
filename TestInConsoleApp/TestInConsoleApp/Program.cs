@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Int_InHappyNumber();
-            Console.WriteLine(test.IsHappy(19));
+            var test=new GenerateTowerTriangle();
+            Console.WriteLine(test.GetRow(3));
            
             Console.Read();
         }

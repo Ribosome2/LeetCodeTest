@@ -35,5 +35,15 @@ namespace TestInConsoleApp
 
             return reList;
         }
+
+        //给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。
+//        进阶：
+//        你可以优化你的算法到 O(k) 空间复杂度吗？
+        public List<int> GetRow(int rowIndex)
+        {
+            //这个题目的第K行是从0 开始算的，所以要加1
+            var allList = Generate(rowIndex+1);
+            return allList[allList.Count - 1];
+        }
     }
 }
