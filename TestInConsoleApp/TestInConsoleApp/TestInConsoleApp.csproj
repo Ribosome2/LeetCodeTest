@@ -84,6 +84,7 @@
     <Compile Include="RotateMatrix.cs" />
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
+    <Compile Include="Str_AddStrings.cs" />
     <Compile Include="Str_CountAndSay.cs" />
     <Compile Include="Str_FindTheDifference.cs" />
     <Compile Include="Str_FirstUniqueChar.cs" />

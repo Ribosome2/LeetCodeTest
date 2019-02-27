@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new GenerateTowerTriangle();
-            Console.WriteLine(test.GetRow1(4));
+            var test=new Str_AddStrings();
+            Console.WriteLine(test.AddStrings("98","9"));
            
             Console.Read();
         }
