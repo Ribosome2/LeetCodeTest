@@ -45,5 +45,43 @@ namespace TestInConsoleApp
             var allList = Generate(rowIndex+1);
             return allList[allList.Count - 1];
         }
+
+        //O(k) 空间复杂度
+        public List<int> GetRow1(int numRows)
+        {
+            List<int> list = new List<int>() { 1 };
+            if (numRows > 0)
+            {
+                for (int row = 1; row < numRows; row++)
+                {
+                   
+                    List<int> preList = list;
+                    for (int j = 0; j < row + 1; j++)
+                    {
+                        int num = 0;
+                        if ((j - 1) >= 0 && (j - 1) < preList.Count)
+                        {
+                            num += preList[j - 1];
+                        }
+                        if (j >= 0 && j < preList.Count)
+                        {
+                            num += preList[j];
+                        }
+
+                        if (list.Count < row)
+                        {
+                            list.Add(num);
+                        }
+                        else
+                        {
+                            list[j]=num;
+                        }
+                        
+                    }
+                }
+            }
+
+            return list;
+        }
     }
 }
