@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TestInConsoleApp
 {
@@ -50,34 +51,41 @@ namespace TestInConsoleApp
         public List<int> GetRow1(int numRows)
         {
             List<int> list = new List<int>() { 1 };
-            if (numRows > 0)
+            
+            for (int row = 1; row < numRows; row++)
             {
-                for (int row = 1; row < numRows; row++)
+               Console.WriteLine("Row "+row);
+                List<int> preList = list;
+                int preCount = preList.Count;
+                int preLeft = 0; 
+                int preRight = preList[0];
+                for (int j = 0; j < row + 1; j++)
                 {
-                   
-                    List<int> preList = list;
-                    for (int j = 0; j < row + 1; j++)
-                    {
-                        int num = 0;
-                        if ((j - 1) >= 0 && (j - 1) < preList.Count)
-                        {
-                            num += preList[j - 1];
-                        }
-                        if (j >= 0 && j < preList.Count)
-                        {
-                            num += preList[j];
-                        }
+                    Console.WriteLine("Left " + preLeft + " preRight " + preRight);
 
-                        if (list.Count < row)
-                        {
-                            list.Add(num);
-                        }
-                        else
-                        {
-                            list[j]=num;
-                        }
-                        
+                    int num = 0;
+                    if ((j - 1) >= 0 && (j - 1) < preCount) //左边有合法的就左边的
+                    {
+                        num += preLeft;
                     }
+
+                    if (j >= 0 && j < preCount)  //右边有合法的就加上右边的
+                    {
+                        num +=preRight;
+                    }
+
+                    if (preCount == j)
+                    {
+                        list.Add(num);
+                    }
+                    else
+                    {
+                        
+                        preLeft = preRight;
+                        preRight = list[j];
+                        list[j]=num;
+                    }
+                    
                 }
             }
 

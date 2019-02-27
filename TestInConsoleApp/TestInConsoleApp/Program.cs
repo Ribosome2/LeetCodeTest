@@ -11,7 +11,7 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
             var test=new GenerateTowerTriangle();
-            Console.WriteLine(test.GetRow(3));
+            Console.WriteLine(test.GetRow1(4));
            
             Console.Read();
         }
