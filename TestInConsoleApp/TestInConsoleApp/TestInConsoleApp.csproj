@@ -55,6 +55,7 @@
     <Compile Include="GenerateTowerTriangle.cs" />
     <Compile Include="Int_AddDigits.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
+    <Compile Include="Int_FindNthDigit.cs" />
     <Compile Include="Int_GuessNum.cs" />
     <Compile Include="Int_HammingWeight.cs" />
     <Compile Include="Int_InHappyNumber.cs" />
@@ -86,6 +87,8 @@
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_AddStrings.cs" />
     <Compile Include="Str_CountAndSay.cs" />
+    <Compile Include="Str_CountSegments.cs" />
+    <Compile Include="Str_DetectCapitalUse.cs" />
     <Compile Include="Str_FindTheDifference.cs" />
     <Compile Include="Str_FirstUniqueChar.cs" />
     <Compile Include="Str_IsPalindrome.cs" />
