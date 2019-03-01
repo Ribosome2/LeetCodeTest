@@ -2,6 +2,7 @@
 {
     public class Int_BinarySearch
     {
+        //
         public int Search(int[] nums, int target)
         {
             int left = 0;
