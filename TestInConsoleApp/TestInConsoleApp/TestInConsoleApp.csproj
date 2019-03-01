@@ -54,6 +54,7 @@
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
     <Compile Include="Int_AddDigits.cs" />
+    <Compile Include="Int_BinarySearch.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
     <Compile Include="Int_FindNthDigit.cs" />
     <Compile Include="Int_GuessNum.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="Str_LengthOfLastWord.cs" />
     <Compile Include="Str_ReverseChaArray.cs" />
+    <Compile Include="Str_RotateStr.cs" />
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
     <Compile Include="Tree_SortedArrayToBST.cs" />

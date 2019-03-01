@@ -9,7 +9,6 @@
         public bool RotateString(string A, string B)
         {
             return A.Length == B.Length && (A + A).Contains(B);
-            return false;
         }
     }
 }
