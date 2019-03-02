@@ -63,7 +63,6 @@ namespace TestInConsoleApp
 
             chars[validIndex] = prev;
             validIndex++;
-            count++;
             if (prevCount > 1)
             {
                 if (prevCount < 10)
