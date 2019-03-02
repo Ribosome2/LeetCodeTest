@@ -10,10 +10,13 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Str_AddStrings();
-            Console.WriteLine(test.AddStrings("98","9"));
-           
-            Console.Read();
+            var test = new Str_Compress();
+            Console.WriteLine(test.Compress(new char[]
+            {
+                'a', 'a', 'b', 'b', 'c', 'c', 'c'
+            }));
+
+        Console.Read();
         }
     }
 }
