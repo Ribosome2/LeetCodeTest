@@ -10,13 +10,10 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Str_Compress();
-            Console.WriteLine(test.Compress(new char[]
-            {
-                'a', 'a', 'b', 'b', 'c', 'c', 'c'
-            }));
+            var test = new Str_RepeatedSubstringPattern();
+            Console.WriteLine(test.RepeatedSubstringPattern("abab"));
 
-        Console.Read();
+            Console.Read();
         }
     }
 }
