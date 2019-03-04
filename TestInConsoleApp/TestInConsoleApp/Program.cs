@@ -10,9 +10,9 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test=new Str_AddStrings();
-            Console.WriteLine(test.AddStrings("98","9"));
-           
+            var test = new Str_RepeatedSubstringPattern();
+            Console.WriteLine(test.RepeatedSubstringPattern("abab"));
+
             Console.Read();
         }
     }

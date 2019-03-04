@@ -48,6 +48,7 @@
     <Compile Include="Array_MergeTowArray.cs" />
     <Compile Include="Array_MoveZeros.cs" />
     <Compile Include="Array_RottingOrange.cs" />
+    <Compile Include="Arr_IsMonotonic.cs" />
     <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
@@ -88,6 +89,8 @@
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_AddStrings.cs" />
+    <Compile Include="Str_BuddyString.cs" />
+    <Compile Include="Str_Compress.cs" />
     <Compile Include="Str_CountAndSay.cs" />
     <Compile Include="Str_CountSegments.cs" />
     <Compile Include="Str_DetectCapitalUse.cs" />
@@ -95,6 +98,7 @@
     <Compile Include="Str_FirstUniqueChar.cs" />
     <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="Str_LengthOfLastWord.cs" />
+    <Compile Include="Str_RepeatedSubstringPattern.cs" />
     <Compile Include="Str_ReverseChaArray.cs" />
     <Compile Include="Str_RotateStr.cs" />
     <Compile Include="TreeLevelOrder.cs" />
