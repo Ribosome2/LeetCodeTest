@@ -10,11 +10,12 @@ namespace TestInConsoleApp
         public int[][] KClosest(int[][] points, int K)
         {
             int[][] result = new int[K][];
-            LinkedList<PointData> linkedList = new LinkedList<PointData>();
+            LinkedList<int[]> linkedList = new LinkedList<int[]>();
             for (int i = 0; i < points.Length; i++)
             {
                 var dist = GetSquartDist(points[i]);
-                AddToList( K, linkedList, dist, i);
+
+                AddToList(points, K, linkedList, dist, i);
             }
 
             var curNode = linkedList.First;
@@ -22,7 +23,7 @@ namespace TestInConsoleApp
             while (curNode != null)
             {
 
-                result[index] = points[curNode.Value.Index];
+                result[index] = curNode.Value;
                 curNode = curNode.Next;
                 index++;
             }
@@ -30,20 +31,16 @@ namespace TestInConsoleApp
             return result;
         }
 
-        struct PointData
-        {
-            public float Dist;
-            public int Index;
-        }
 
-        private void AddToList( int K, LinkedList<PointData> linkedList, float dist, int i)
+
+        private void AddToList(int[][] points, int K, LinkedList<int[]> linkedList, float dist, int i)
         {
             var node = linkedList.First;
             while (node != null)
             {
-                if (node.Value.Dist < dist)
+                if (GetSquartDist(node.Value) < dist)
                 {
-                    linkedList.AddBefore(node, new PointData(){Dist = dist,Index = i});
+                    linkedList.AddBefore(node, points[i]);
                     if (linkedList.Count > K)
                     {
                         linkedList.RemoveFirst();
@@ -55,7 +52,7 @@ namespace TestInConsoleApp
             }
 
 
-            linkedList.AddLast(new PointData() { Dist = dist, Index = i });
+            linkedList.AddLast(points[i]);
             if (linkedList.Count > K)
             {
                 linkedList.RemoveFirst();
