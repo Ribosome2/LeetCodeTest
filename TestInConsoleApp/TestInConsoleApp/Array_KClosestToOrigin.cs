@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TestInConsoleApp
 {
@@ -14,7 +16,6 @@ namespace TestInConsoleApp
             for (int i = 0; i < points.Length; i++)
             {
                 var dist = GetSquartDist(points[i]);
-
                 AddToList(points, K, linkedList, dist, i);
             }
 
@@ -62,6 +63,15 @@ namespace TestInConsoleApp
         float GetSquartDist(int[] point)
         {
             return point[0] * point[0] + point[1] * point[1];
+        }
+
+        //直接用Ling这样写比上面的快了一倍
+        public int[][] KClosest1(int[][] points, int K)
+        {
+            var result = from a in points
+                orderby Math.Pow(a[0], 2) + Math.Pow(a[1], 2)
+                select a;
+            return result.Take(K).ToArray();
         }
     }
 }
