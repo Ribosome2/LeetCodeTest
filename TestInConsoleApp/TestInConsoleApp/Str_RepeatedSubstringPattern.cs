@@ -18,12 +18,21 @@
                     secondIndex = i;
                     int patterCount = secondIndex;
                     bool allMatch =true;
-                    string pattern = s.Substring(0, patterCount);
                     while (secondIndex<=s.Length-patterCount)
                     {
-                        if (!pattern.Equals(s.Substring(secondIndex, patterCount)))
+                        //这样写比用SubString构建字符串要快很多
+                        for (int index = 0; index < patterCount; index++)
                         {
-                            allMatch = false;
+                            if (s[index] != s[secondIndex + index])
+                            {
+                                allMatch = false;
+                                break;
+                            }
+                        }
+
+//                        if (!pattern.Equals(s.Substring(secondIndex, patterCount)))
+                        if (allMatch == false) 
+                        {
                             break;
                         }
                         else
