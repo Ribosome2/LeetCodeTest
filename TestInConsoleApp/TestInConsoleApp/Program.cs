@@ -10,8 +10,11 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Str_RepeatedSubstringPattern();
-            Console.WriteLine(test.RepeatedSubstringPattern("abab"));
+            var test = new Array_SortedSquares();
+            Console.WriteLine(test.SortedSquares(new int[]
+            {
+                -4, -1, 0, 3, 10
+            }));
 
             Console.Read();
         }
