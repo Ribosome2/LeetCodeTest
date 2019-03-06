@@ -8,7 +8,8 @@
         public bool IsPerfectSquare(int num)
         {
             int left = 1;
-            int right = num < 46340 ? num : 46340; //要考虑超出Int范围的情况
+           
+            int right = num < 46340 ? num : 46340; //要考虑超出Int范围的情况  Math.Sqrt(int.MaxValue) 可以得到46340
             while (left<=right)
             {
                 int mid = left + (right - left) / 2;

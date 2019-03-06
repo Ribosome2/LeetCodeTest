@@ -12,7 +12,7 @@ namespace TestInConsoleApp
         {
             var test = new Int_IsPerfectSquare();
             Console.WriteLine(test.IsPerfectSquare(2147483647));
-
+            Console.WriteLine(Math.Sqrt(int.MaxValue));
             Console.Read();
         }
     }
