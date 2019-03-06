@@ -10,11 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_FindRelativeRanks();
-            Console.WriteLine(test.FindRelativeRanks(new int[]
-            {
-                5,4,3,2,1
-            }));
+            var test = new Int_IsPerfectSquare();
+            Console.WriteLine(test.IsPerfectSquare(2147483647));
 
             Console.Read();
         }
