@@ -33,36 +33,20 @@ namespace TestInConsoleApp
                 }
                 else
                 {
-                    if (A - B > 2)
+                   
+                    if (A > B)
                     {
                         sb.Append('a');
                         A--;
                         aCount++;
                         bCount = 0;
                     }
-                    else if (B - A > 2)
+                    else
                     {
                         sb.Append('b');
                         B--;
                         bCount++;
                         aCount = 0;
-                    }
-                    else
-                    {
-                        if (A > B)
-                        {
-                            sb.Append('a');
-                            A--;
-                            aCount++;
-                            bCount = 0;
-                        }
-                        else
-                        {
-                            sb.Append('b');
-                            B--;
-                            bCount++;
-                            aCount = 0;
-                        }
                     }
                 }
             }
