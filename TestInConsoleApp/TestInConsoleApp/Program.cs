@@ -10,10 +10,10 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_SortedSquares();
-            Console.WriteLine(test.SortedSquares(new int[]
+            var test = new Array_FindRelativeRanks();
+            Console.WriteLine(test.FindRelativeRanks(new int[]
             {
-                -4, -1, 0, 3, 10
+                5,4,3,2,1
             }));
 
             Console.Read();

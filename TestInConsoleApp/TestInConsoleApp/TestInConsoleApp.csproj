@@ -46,6 +46,7 @@
     <Compile Include="ArraySearchInsert.cs" />
     <Compile Include="Array_AddToArrayForm.cs" />
     <Compile Include="Array_FindMissinNumber.cs" />
+    <Compile Include="Array_FindRelativeRanks.cs" />
     <Compile Include="Array_KClosestToOrigin.cs" />
     <Compile Include="Array_MergeTowArray.cs" />
     <Compile Include="Array_MoveZeros.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />
+    <Compile Include="LinkList_MiddleNode.cs" />
     <Compile Include="LinkList_RemoveDuplicate.cs" />
     <Compile Include="LinkList_RemoveNthFromEnd.cs" />
     <Compile Include="LongestCommonPrefix.cs" />
