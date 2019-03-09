@@ -22,30 +22,65 @@ namespace TestInConsoleApp
                 var  ch = ops[i];
                 if (ch == "C")
                 {
-
-                }
-                if (ch == "+")
-                {
-                    int num= opList[opList.Count - 1]+ opList[opList.Count - 2];
-                    re += num;
-                    opList.Add(num);
-                }else if (ch == "D")
-                {
-                    int num= (opList[opList.Count - 1] * 2);
-                    re += num;
-                    opList.Add(num);
-                }else if (ch == "C")
-                {
                     re -= opList[opList.Count - 1];
-                    opList.RemoveAt(opList.Count-1);
+                    opList.RemoveAt(opList.Count - 1);
                 }
                 else
                 {
-                    int num = int.Parse(ch);
-                    opList.Add(num);
+                    int num;
+                    if (ch == "+")
+                    {
+                         num = opList[opList.Count - 1] + opList[opList.Count - 2];
+                    }
+                    else if (ch == "D")
+                    {
+                         num = (opList[opList.Count - 1] * 2);
+                    }
+                    else
+                    {
+                         num = int.Parse(ch);
+                    }
                     re += num;
+                    opList.Add(num);
+                }
+                
+            }
+            return re;
+        }
+
+
+        public int CalPoints1(string[] ops)
+        {
+            int re = 0;
+            Stack<int> opStack = new Stack<int>();
+            for (int i = 0; i < ops.Length; i++)
+            {
+                var str = ops[i];
+                if (str == "+")
+                {
+                    //这是是细节关键，前两个回合也是可以用栈的
+                    int oldTop = opStack.Pop();
+                    int num = oldTop + opStack.Peek();
+                    opStack.Push(oldTop);
+                    opStack.Push(num);
+                }else if (str == "D")
+                {
+                    opStack.Push(opStack.Peek()*2);
+                }else if (str == "C")
+                {
+                    opStack.Pop();
+                }
+                else
+                {
+                    opStack.Push(int.Parse(str));
                 }
             }
+
+            while (opStack.Count>0)
+            {
+                re += opStack.Pop();
+            }
+
             return re;
         }
     }
