@@ -10,9 +10,10 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Int_HammingDistance();
-            Console.WriteLine(test.HammingDistance1(1,4));
-            Console.WriteLine(Math.Sqrt(int.MaxValue));
+            var test = new Array_DistributeCandies();
+            Console.WriteLine(test.DistributeCandies(new int[]{1, 1, 14, 1, 10, 1, 1, 1}));
+            
+
             Console.Read();
         }
     }
