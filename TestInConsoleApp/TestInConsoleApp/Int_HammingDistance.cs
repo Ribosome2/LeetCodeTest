@@ -43,5 +43,22 @@ namespace TestInConsoleApp
 
             return dist;
         }
+
+        public int HammingDistance1(int x, int y)
+        {
+            //位运算和上面转成字符串再对比好像也差不了多少，内存也差不了多少，测试框架有问题？
+            int res = 0;
+            int z = x ^ y;
+            while (z>0)
+            {
+                if ((z & 1)>0)
+                {
+                    ++res;
+                }
+                   
+                z >>= 1;
+            }
+            return res;
+        }
     }
 }

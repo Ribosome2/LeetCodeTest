@@ -11,7 +11,7 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
             var test = new Int_HammingDistance();
-            Console.WriteLine(test.HammingDistance(1,4));
+            Console.WriteLine(test.HammingDistance1(1,4));
             Console.WriteLine(Math.Sqrt(int.MaxValue));
             Console.Read();
         }
