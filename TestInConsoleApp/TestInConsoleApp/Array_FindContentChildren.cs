@@ -16,14 +16,16 @@ namespace TestInConsoleApp
             int count = 0;
             Array.Sort(g);
             Array.Sort(s);
+            int lenS = s.Length - 1;
             for (int i = g.Length - 1; i >= 0; i--)
             {
                 int gNum = g[i];
-                for (int j = s.Length - 1; j >= 0; j--)
+                for (int j = lenS; j >= 0; j--)
                 {
-                    if (s[i] >= gNum)
+                    if (s[j] >= gNum)
                     {
-                        s[i] = 0;
+                        s[j] = 0;
+                        lenS = j - 1;
                         count++;
                         break;
                     }
