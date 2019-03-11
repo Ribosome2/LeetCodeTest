@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Int_IsPerfectSquare();
-            Console.WriteLine(test.IsPerfectSquare(2147483647));
+            var test = new Int_HammingDistance();
+            Console.WriteLine(test.HammingDistance(4,1));
             Console.WriteLine(Math.Sqrt(int.MaxValue));
             Console.Read();
         }
