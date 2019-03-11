@@ -14,12 +14,27 @@ namespace TestInConsoleApp
             var binY = Convert.ToString(y,2);
             int indexX = binX.Length - 1;
             int indexY = binY.Length - 1;
-            while (indexX>-1 && indexY>-1)
+            //从右向左遍历，当两个都有数的时候对比一下， 只有一个还有值的时候，另一个就是0，有值的位为1就加1
+            while (indexX>-1 ||  indexY>-1)
             {
-                if (binX[indexX] != binY[indexY])
+                if (indexX > -1 && indexY > -1)
                 {
-                    dist++;
+                    if (binX[indexX] != binY[indexY])
+                    {
+                        dist++;
+                    }
                 }
+                else
+                {
+                    if (indexY > -1 && binY[indexY]=='1')
+                    {
+                        dist++;
+                    }else if (indexX > -1 && binX[indexX] == '1')
+                    {
+                        dist++;
+                    }
+                }
+                
 
                 indexY--;
                 indexX--;
