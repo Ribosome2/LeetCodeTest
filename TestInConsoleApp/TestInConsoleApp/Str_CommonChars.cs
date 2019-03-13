@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace TestInConsoleApp
@@ -12,6 +13,7 @@ namespace TestInConsoleApp
 //        你可以按任意顺序返回答案。
         public IList<string> CommonChars(string[] A)
         {
+            //每个字符串一个字典，记录每个字符出现的次数
             List<string> res = new List<string>();
             List<Dictionary<char ,int>> DictLis= new List<Dictionary<char, int>>();
             for (int i = 0; i < A.Length; i++)
@@ -37,35 +39,36 @@ namespace TestInConsoleApp
             while (iter.MoveNext())
             {
                 int count = iter.Current.Value;
-                while (count > 0)
+                if (iter.Current.Value>0)
                 {
                     bool allMet = true;
                     for (int i = 1; i < DictLis.Count; i++)
                     {
                         var dict = DictLis[i];
-                        if (dict.ContainsKey(iter.Current.Key) == false || dict[iter.Current.Key] == 0)
+                        if (dict.ContainsKey(iter.Current.Key) == false )
                         {
                             allMet = false;
                             break;
+                        }
+                        else
+                        {
+                            //这个字符出现的次数等于，所有字典中出现次数的最小值
+                            count = Math.Min(dict[iter.Current.Key], count);
                         }
                     }
 
                     if (allMet)
                     {
-                        res.Add(iter.Current.Key.ToString());
-                        for (int i = 1; i < DictLis.Count; i++)
+                        
+                        for (int i = 0; i < count; i++)
                         {
-                            var dict = DictLis[i];
-                            dict[iter.Current.Key] = dict[iter.Current.Key] - 1;
-
+                            res.Add(iter.Current.Key.ToString());
                         }
                     }
 
-                    count--;
-                    firstDict[iter.Current.Key] = firstDict[iter.Current.Key] - 1;
                 }
             }
-
+            iter.Dispose();
 
 
             
