@@ -51,7 +51,7 @@ namespace TestInConsoleApp
             }
         }
 
-        private int[] sumArray; //提前存好每一个索引前面的综合，取区间就可以等于 sum(j)-sum(i)
+        private int[] sumArray; //提前存好每一个索引前面的综合，取区间就可以等于 sum(j)-sum(i-1)
       
 
         public int SumRange(int i, int j)
