@@ -22,13 +22,14 @@ namespace TestInConsoleApp
                 var str = A[i];
                 for (int index = 0; index < str.Length; index++)
                 {
-                    if (dict.ContainsKey(str[index]) == false)
+                    var key = str[index];
+                    if (dict.ContainsKey(key) == false)
                     {
-                        dict[str[index]] = 1;
+                        dict[key] = 1;
                     }
                     else
                     {
-                        dict[str[index]] = dict[str[index]]+1;
+                        dict[key] = dict[key] + 1;
                     }
                 }
                 DictLis.Add(dict);
