@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_DistributeCandies();
-            Console.WriteLine(test.DistributeCandies(new int[]{1, 1, 14, 1, 10, 1, 1, 1}));
+            var test = new Str_CommonChars();
+            Console.WriteLine(test.CommonChars(new string[] { "bella", "label", "roller" }));
             
 
             Console.Read();

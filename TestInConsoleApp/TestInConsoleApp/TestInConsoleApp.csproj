@@ -104,6 +104,7 @@
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_AddStrings.cs" />
     <Compile Include="Str_BuddyString.cs" />
+    <Compile Include="Str_CommonChars.cs" />
     <Compile Include="Str_Compress.cs" />
     <Compile Include="Str_CountAndSay.cs" />
     <Compile Include="Str_CountSegments.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Str_ReverseChaArray.cs" />
     <Compile Include="Str_RotateStr.cs" />
     <Compile Include="Str_StrWithout3a3b.cs" />
+    <Compile Include="Str_ToLowerCase.cs" />
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
     <Compile Include="Tree_SortedArrayToBST.cs" />

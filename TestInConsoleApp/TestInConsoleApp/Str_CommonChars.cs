@@ -12,9 +12,63 @@ namespace TestInConsoleApp
 //        你可以按任意顺序返回答案。
         public IList<string> CommonChars(string[] A)
         {
-            Dictionary<char ,int> countDict=new Dictionary<char, int>();
+            List<string> res = new List<string>();
+            List<Dictionary<char ,int>> DictLis= new List<Dictionary<char, int>>();
+            for (int i = 0; i < A.Length; i++)
+            {
+                var dict = new Dictionary<char, int>();
+                var str = A[i];
+                for (int index = 0; index < str.Length; index++)
+                {
+                    if (dict.ContainsKey(str[index]) == false)
+                    {
+                        dict[str[index]] = 1;
+                    }
+                    else
+                    {
+                        dict[str[index]] = dict[str[index]]+1;
+                    }
+                }
+                DictLis.Add(dict);
+            }
 
-            List<string> res=new  List<string>();
+            var firstDict = DictLis[0];
+            var iter = firstDict.GetEnumerator();
+            while (iter.MoveNext())
+            {
+                int count = iter.Current.Value;
+                while (count > 0)
+                {
+                    bool allMet = true;
+                    for (int i = 1; i < DictLis.Count; i++)
+                    {
+                        var dict = DictLis[i];
+                        if (dict.ContainsKey(iter.Current.Key) == false || dict[iter.Current.Key] == 0)
+                        {
+                            allMet = false;
+                            break;
+                        }
+                    }
+
+                    if (allMet)
+                    {
+                        res.Add(iter.Current.Key.ToString());
+                        for (int i = 1; i < DictLis.Count; i++)
+                        {
+                            var dict = DictLis[i];
+                            dict[iter.Current.Key] = dict[iter.Current.Key] - 1;
+
+                        }
+                    }
+
+                    count--;
+                    firstDict[iter.Current.Key] = firstDict[iter.Current.Key] - 1;
+                }
+            }
+
+
+
+            
             return res;
         }
     }
