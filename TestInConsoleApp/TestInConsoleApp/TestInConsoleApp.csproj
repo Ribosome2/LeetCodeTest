@@ -116,6 +116,7 @@
     <Compile Include="Str_LengthOfLastWord.cs" />
     <Compile Include="Str_RepeatedSubstringPattern.cs" />
     <Compile Include="Str_ReverseChaArray.cs" />
+    <Compile Include="Str_ReverseOnlyLetters.cs" />
     <Compile Include="Str_RotateStr.cs" />
     <Compile Include="Str_StrWithout3a3b.cs" />
     <Compile Include="Str_ToLowerCase.cs" />
