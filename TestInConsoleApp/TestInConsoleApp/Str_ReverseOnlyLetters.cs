@@ -1,4 +1,7 @@
-﻿namespace TestInConsoleApp
+﻿using System.Collections.Generic;
+using System.Text;
+
+namespace TestInConsoleApp
 {
     public class Str_ReverseOnlyLetters
     {
@@ -6,7 +9,30 @@
         public string ReverseOnlyLetters(string S)
         {
             char[] arr=new  char[S.Length];
-            return arr.ToString();
+            List<int> indexList=new List<int>();
+            for (int i = 0; i < S.Length; i++)
+            {
+                var c = S[i];
+                if ((c >= 'a' && c <= 'z' ) || (c>='A' && c<='Z'))
+                {
+                    indexList.Add(i);
+                }
+                else
+                {
+                    arr[i] = c;
+                }
+            }
+
+            int left = 0;
+            int right = indexList.Count - 1;
+            while (left<right)
+            {
+                arr[indexList[left]] = arr[indexList[right]];
+                arr[indexList[right]] = arr[indexList[left]];
+                left++;
+                right--;
+            }
+            return  new string(arr);
         }
     }
 }
