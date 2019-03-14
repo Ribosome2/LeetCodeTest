@@ -25,14 +25,77 @@ namespace TestInConsoleApp
 
             int left = 0;
             int right = indexList.Count - 1;
-            while (left<right)
+
+            while (left<=right)
             {
-                arr[indexList[left]] = arr[indexList[right]];
-                arr[indexList[right]] = arr[indexList[left]];
+                arr[indexList[left]] = S[indexList[right]];
+                arr[indexList[right]] = S[indexList[left]];
                 left++;
                 right--;
             }
             return  new string(arr);
+        }
+
+        //双指针写法，不需要索引列表
+        public string ReverseOnlyLetters1(string S)
+        {
+            char[] arr = new char[S.Length];
+            int left = 0;
+            int right = S.Length - 1;
+            while (left<=right)
+            {
+                var c = S[left];
+                if (IsLetter(c))
+                {
+                    //从右边选一个字母替换
+                    while (left <= right)
+                    {
+                        if (left == right)
+                        {
+                            arr[left] = c;
+                            left++;
+                        }
+                        else
+                        {
+                            var rc = S[right];
+                            if (IsLetter(rc))
+                            {
+                                arr[left] = rc;
+                                arr[right] = c;
+                                right--;
+                                break;
+                            }
+                            else
+                            {
+                                arr[right] = rc;
+                            }
+
+                            right--;
+                        }
+                        
+                    }
+                }
+                else
+                {
+                    arr[left] = c;
+                }
+
+                left++;
+            }
+         
+            return new string(arr);
+        }
+
+        bool IsLetter(char c)
+        {
+            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

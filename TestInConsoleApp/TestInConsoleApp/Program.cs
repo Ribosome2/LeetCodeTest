@@ -10,8 +10,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new NumArray(new int[]{-2, 0, 3, -5, 2, -1});
-            Console.WriteLine(test.SumRange(0,1));
+            var test = new Str_ReverseOnlyLetters();
+            Console.WriteLine(test.ReverseOnlyLetters1("-S2,_"));
             
 
             Console.Read();
