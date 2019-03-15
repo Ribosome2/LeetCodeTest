@@ -10,10 +10,9 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Str_ReverseOnlyLetters();
-            Console.WriteLine(test.ReverseOnlyLetters1("-S2,_"));
-            
-
+            var test = new Array_FloodFill();
+            var arr = new int[,] {{0, 0, 0}, {0, 1, 1}};
+            Console.WriteLine(test.FloodFill(arr, 1, 1, 1));
             Console.Read();
         }
     }

@@ -52,6 +52,7 @@
     <Compile Include="Array_FindDisappearedNumbers.cs" />
     <Compile Include="Array_FindMissinNumber.cs" />
     <Compile Include="Array_FindRelativeRanks.cs" />
+    <Compile Include="Array_FloodFill.cs" />
     <Compile Include="Array_KClosestToOrigin.cs" />
     <Compile Include="Array_MatrixReshape.cs" />
     <Compile Include="Array_MergeTowArray.cs" />
