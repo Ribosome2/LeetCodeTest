@@ -11,8 +11,8 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
             var test = new Array_FloodFill();
-            var arr = new int[,] {{0, 0, 0}, {0, 1, 1}};
-            Console.WriteLine(test.FloodFill(arr, 1, 1, 1));
+            var arr = new int[,] {{1, 1, 1}, {1, 1, 0},{1,0,1}};
+            Console.WriteLine(test.FloodFill(arr, 1, 1, 2));
             Console.Read();
         }
     }

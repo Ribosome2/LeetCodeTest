@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TestInConsoleApp
 {
@@ -12,14 +13,15 @@ namespace TestInConsoleApp
         //最后返回经过上色渲染后的图像。
         public int[,] FloodFill(int[,] image, int sr, int sc, int newColor)
         {
-            int maxRow = image.GetLength(0);
-            int maxCol = image.GetLength(1);
-            Queue<int > openQueque=new Queue<int>();
             int targetValue = image[sr, sc];
             if (targetValue == newColor)
             {
                 return image;
             }
+            int maxRow = image.GetLength(0);
+            int maxCol = image.GetLength(1);
+            Queue<int > openQueque=new Queue<int>();
+           
            TryFillQueque(image,targetValue,openQueque,sr,sc,maxRow,maxCol);
             while (openQueque.Count>0)
             {
@@ -29,16 +31,12 @@ namespace TestInConsoleApp
                     int index = openQueque.Dequeue();
                     int row = index / maxCol;
                     int col = index % maxCol;
-                    if (image[row, col] == targetValue)
-                    {
-                        image[row, col] = newColor;
-                        TryFillQueque(image, targetValue, openQueque, row - 1, col, maxRow, maxCol);
-                        TryFillQueque(image, targetValue, openQueque, row + 1, col, maxRow, maxCol);
-                        TryFillQueque(image, targetValue, openQueque, row , col - 1, maxRow, maxCol);
-                        TryFillQueque(image, targetValue, openQueque, row , col + 1, maxRow, maxCol);
-                    }
-
-                    count--;
+                    image[row, col] = newColor;
+                    TryFillQueque(image,targetValue,openQueque, row - 1, col, maxRow, maxCol);
+                    TryFillQueque(image,targetValue,openQueque, row + 1, col, maxRow, maxCol);
+                    TryFillQueque(image,targetValue,openQueque, row , col - 1, maxRow, maxCol);
+                    TryFillQueque(image,targetValue,openQueque, row , col + 1, maxRow, maxCol);
+                    count--;         
                 }
             }
             return image;
