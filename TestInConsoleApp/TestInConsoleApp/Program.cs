@@ -10,9 +10,10 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_FloodFill();
-            var arr = new int[,] {{1, 1, 1}, {1, 1, 0},{1,0,1}};
-            Console.WriteLine(test.FloodFill(arr, 1, 1, 2));
+            var test = new Array_IsToeplitzMatrix();
+            //var arr = new int[,]{{44, 35, 39},{15, 44, 35},{17, 15, 44},{80, 17, 15},{43, 80, 0},{77, 43, 80}};
+            var arr = new int[,] { { 1, 2, 3,4 }, { 5, 1,2,3 }, { 9,5,1,2 } };
+            Console.WriteLine(test.IsToeplitzMatrix(arr));
             Console.Read();
         }
     }

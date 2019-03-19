@@ -1,4 +1,6 @@
-﻿namespace TestInConsoleApp
+﻿using System;
+
+namespace TestInConsoleApp
 {
     public class Array_IsToeplitzMatrix
     {
@@ -10,11 +12,13 @@
             int rowCount = matrix.GetLength(0);
             int colCount = matrix.GetLength(1);
 
-            for (int i = 0; i < colCount; i++)
+            int step = 0;
+            int row = rowCount - 1;
+            int col = step;
+            int val = matrix[row, col];
+            //从左下角一直遍历到右上角
+            while (col!=colCount-1 || row!=0) 
             {
-                int row = rowCount - 1;
-                int col = i;
-                int val = matrix[row, col];
                 while (col >= 0 && col < colCount && row >= 0 && row < rowCount)
                 {
                     if (matrix[row, col] != val)
@@ -24,7 +28,13 @@
                     col--;
                     row--;
                 }
+
+                step++;
+                row = Math.Max(0,rowCount - 1-step/colCount);
+                col = Math.Min(step,colCount-1);
+                val = matrix[row, col];
             }
+            
             return true;
         }
 
