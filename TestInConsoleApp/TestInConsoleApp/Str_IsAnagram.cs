@@ -65,9 +65,34 @@ namespace TestInConsoleApp
             }
 
             return true;
-
-
         }
+        public bool IsAnagram1(string s, string t)
+        {
+            if (s.Length != t.Length)
+            {
+                return false;
+            }
 
+            //建立一个26个字母的数组记录,题目说了只包含小写字母
+            int[] letterArray=new int[26];
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                //一个加一个减，如果字母内容都是一样的话，对应字母位的值一定是0
+                letterArray[s[i] - 'a'] += 1;
+                letterArray[t[i] - 'a'] -= 1;
+            }
+
+            for (int i = 0; i < letterArray.Length; i++)
+            {
+                if (letterArray[i] != 0)
+                {
+                    return false;
+                }
+            }
+           
+
+            return true;
+        }
     }
 }
