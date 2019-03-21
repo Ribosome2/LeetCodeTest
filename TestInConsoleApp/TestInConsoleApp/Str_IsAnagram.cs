@@ -72,7 +72,6 @@ namespace TestInConsoleApp
             {
                 return false;
             }
-
             //建立一个26个字母的数组记录,题目说了只包含小写字母
             int[] letterArray=new int[26];
 
@@ -90,7 +89,6 @@ namespace TestInConsoleApp
                     return false;
                 }
             }
-           
 
             return true;
         }
