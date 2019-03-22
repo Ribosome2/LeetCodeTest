@@ -13,7 +13,7 @@
                 n -= level;
                 level++;
             }
-            return level;
+            return level-1;
         }
     }
 }
