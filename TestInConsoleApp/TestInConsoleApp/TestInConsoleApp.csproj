@@ -69,6 +69,7 @@
     <Compile Include="Int_AddDigits.cs" />
     <Compile Include="Int_BinarySearch.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
+    <Compile Include="Int_FindComplement.cs" />
     <Compile Include="Int_FindNthDigit.cs" />
     <Compile Include="Int_GetSumWithoutNormalOperator.cs" />
     <Compile Include="Int_GuessNum.cs" />
