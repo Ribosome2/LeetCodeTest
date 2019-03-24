@@ -24,7 +24,7 @@ namespace TestInConsoleApp
                 {
                     if (dict[num] == false)
                     {
-                        dict[nums2[i]] = true;
+                        dict[num] = true;
                         count++;
                     }
                 }
@@ -39,6 +39,7 @@ namespace TestInConsoleApp
                     count--;
                 }
             }
+            iter.Dispose(); //加了Dispose代码能跑的更快？
             return result;
         }
     }
