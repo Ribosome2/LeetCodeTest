@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Assets.Scripts;
 
 namespace TestInConsoleApp
 {
@@ -10,10 +11,10 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_MaxSubArray();
+            var test = new ClimbStairsTry();
             //var arr = new int[,]{{44, 35, 39},{15, 44, 35},{17, 15, 44},{80, 17, 15},{43, 80, 0},{77, 43, 80}};
             var arr = new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-            Console.WriteLine(test.MaxSubArray2(arr));
+            Console.WriteLine(test.ClimbStairs1(5));
             Console.Read();
         }
     }
