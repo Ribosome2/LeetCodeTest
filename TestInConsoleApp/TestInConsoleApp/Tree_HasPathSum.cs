@@ -13,32 +13,8 @@ namespace TestInConsoleApp
                 return false;
             }
            
+            //叶子节点的定义是没有子节点的节点
             if (sum == root.val && root.left==null && root.right==null)
-            {
-                return true;
-            }
-
-            if (CheckChildNode(root.left, sum - root.val))
-            {
-                return true;
-            }
-
-            if (CheckChildNode(root.right, sum - root.val))
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        bool CheckChildNode(TreeNode root, int sum)
-        {
-            if (root == null)
-            {
-                return false;
-            }
-
-            if (sum == root.val && root.left == null && root.right == null)
             {
                 return true;
             }
