@@ -58,6 +58,7 @@
     <Compile Include="Array_IsToeplitzMatrix.cs" />
     <Compile Include="Array_KClosestToOrigin.cs" />
     <Compile Include="Array_MatrixReshape.cs" />
+    <Compile Include="Array_MaxProfit.cs" />
     <Compile Include="Array_MaxSubArray.cs" />
     <Compile Include="Array_MergeTowArray.cs" />
     <Compile Include="Array_MoveZeros.cs" />
