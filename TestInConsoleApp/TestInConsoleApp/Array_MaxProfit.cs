@@ -38,5 +38,48 @@
 
             return maxProfit;
         }
+
+        //给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+        //设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
+        //注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）
+        public int MaxProfit2(int[] prices)
+        {
+            if (prices == null || prices.Length == 0)
+            {
+                return 0;
+            }
+
+            //一个变量存储当前最小值，一个存储当前最大值
+            //只要检测到比当前最大值小的，就先判断卖出是否能有利润，然后设置为当前最小值，最大值归零
+            //遇到大于等于当前最大值得就覆盖为当前最大值
+            int profit = 0;
+            int cur = prices[0];
+            int max = 0;
+            for (int i = 1; i < prices.Length; i++)
+            {
+                if (prices[i] < max)
+                {
+                    if (max > cur)
+                    {
+                        profit += max - cur;
+                    }
+                    cur = prices[i];
+                    max = 0;
+                }
+                else
+                {
+                    if (prices[i] < cur)
+                    {
+                        cur = prices[i];
+                    }
+                    max = prices[i];
+                }
+            }
+            if (max > cur)
+            {
+                profit += max - cur;
+            }
+            return profit;
+        }
     }
 }
