@@ -11,11 +11,11 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Int_FindComplement();;
+            var test = new Int_Fib();;
             //var arr = new int[,]{{44, 35, 39},{15, 44, 35},{17, 15, 44},{80, 17, 15},{43, 80, 0},{77, 43, 80}};
             var arr = new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
-            Console.WriteLine(test.FindComplement(0));
+            Console.WriteLine(test.Fib1(6));
             Console.Read();
         }
 

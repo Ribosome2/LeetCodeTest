@@ -50,6 +50,7 @@
     <Compile Include="Array_DistributeCandies.cs" />
     <Compile Include="Array_FindContentChildren.cs" />
     <Compile Include="Array_FindDisappearedNumbers.cs" />
+    <Compile Include="Array_FindLengthOfLCIS.cs" />
     <Compile Include="Array_FindMaxConsecutiveOnes.cs" />
     <Compile Include="Array_FindMissinNumber.cs" />
     <Compile Include="Array_FindRelativeRanks.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Int_AddDigits.cs" />
     <Compile Include="Int_BinarySearch.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
+    <Compile Include="Int_Fib.cs" />
     <Compile Include="Int_FindComplement.cs" />
     <Compile Include="Int_FindNthDigit.cs" />
     <Compile Include="Int_GetSumWithoutNormalOperator.cs" />
