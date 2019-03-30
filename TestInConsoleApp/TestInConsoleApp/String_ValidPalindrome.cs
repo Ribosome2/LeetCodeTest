@@ -1,4 +1,6 @@
-﻿namespace TestInConsoleApp
+﻿using System;
+
+namespace TestInConsoleApp
 {
     public class String_ValidPalindrome
     {
@@ -9,8 +11,11 @@
             int left = 0;
             int right = s.Length-1;
             int errorChange = 1;
+            string spaceStr = " ";
             while  (left < right)
             {
+                spaceStr += " ";
+                Console.WriteLine(spaceStr + s.Substring(left, right-left+1));
                 if (s[left] != s[right])
                 {
                    
@@ -20,16 +25,29 @@
                     }
                     else
                     {
+                        if (left + 1 == right)
+                        {
+                            return true;
+                        }
+                        //怎么决定删除左边还是删除右边的？ 暂时只能左右两边都检查一下
                         errorChange--;
                         if (s[left + 1] == s[right])
                         {
                             left++;
-                            continue;
+                            if (CheckValid(s, left, right))
+                            {
+                                return true;
+                            }
+                            left--;
+                        }
 
-                        }else if (s[left] == s[right - 1])
+
+                        if (s[left] == s[right - 1])
                         {
+                            Console.WriteLine("MoveLeft");
                             right--;
-                            continue;
+                            return CheckValid(s, left, right);
+
                         }
                         else
                         {
@@ -37,6 +55,23 @@
                         }
                     }
                 }
+                left++;
+                right--;
+                
+            }
+
+            return true;
+        }
+
+        private static bool CheckValid(string s, int left, int right)
+        {
+            while (left < right)
+            {
+                if (s[left] != s[right])
+                {
+                    return false;
+                }
+
                 left++;
                 right--;
             }
