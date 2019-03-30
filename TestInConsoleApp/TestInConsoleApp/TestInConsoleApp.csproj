@@ -109,6 +109,7 @@
     <Compile Include="RotatekArray.cs" />
     <Compile Include="RotateMatrix.cs" />
     <Compile Include="StrFindNeedleInHaystack.cs" />
+    <Compile Include="String_ValidPalindrome.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_AddStrings.cs" />
     <Compile Include="Str_BuddyString.cs" />
