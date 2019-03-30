@@ -11,11 +11,8 @@ namespace TestInConsoleApp
             int left = 0;
             int right = s.Length-1;
             int errorChange = 1;
-            string spaceStr = " ";
             while  (left < right)
             {
-                spaceStr += " ";
-                Console.WriteLine(spaceStr + s.Substring(left, right-left+1));
                 if (s[left] != s[right])
                 {
                    
@@ -34,7 +31,7 @@ namespace TestInConsoleApp
                         if (s[left + 1] == s[right])
                         {
                             left++;
-                            if (CheckValid(s, left, right))
+                            if (CheckValid(ref s, left, right))
                             {
                                 return true;
                             }
@@ -44,9 +41,8 @@ namespace TestInConsoleApp
 
                         if (s[left] == s[right - 1])
                         {
-                            Console.WriteLine("MoveLeft");
                             right--;
-                            return CheckValid(s, left, right);
+                            return CheckValid(ref s, left, right);
 
                         }
                         else
@@ -63,7 +59,7 @@ namespace TestInConsoleApp
             return true;
         }
 
-        private static bool CheckValid(string s, int left, int right)
+        private static bool CheckValid(ref string s, int left, int right)
         {
             while (left < right)
             {
