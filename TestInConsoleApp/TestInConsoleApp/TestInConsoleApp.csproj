@@ -58,6 +58,7 @@
     <Compile Include="Array_Intersection.cs" />
     <Compile Include="Array_IsToeplitzMatrix.cs" />
     <Compile Include="Array_KClosestToOrigin.cs" />
+    <Compile Include="Array_MajorityElement.cs" />
     <Compile Include="Array_MatrixReshape.cs" />
     <Compile Include="Array_MaxProfit.cs" />
     <Compile Include="Array_MaxSubArray.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Array_MoveZeros.cs" />
     <Compile Include="Array_RottingOrange.cs" />
     <Compile Include="Array_SortedSquares.cs" />
+    <Compile Include="Array_TwoSum.cs" />
     <Compile Include="Arr_IsMonotonic.cs" />
     <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />

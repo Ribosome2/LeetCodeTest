@@ -37,7 +37,7 @@ namespace TestInConsoleApp
 
         public int MajorityElement1(int[] nums)
         {
-            //计数法
+            //计数法(网上也叫摩尔投票算法)
             int count = 1;
             int num = nums[0];
             for (int i = 1; i < nums.Length; i++)
