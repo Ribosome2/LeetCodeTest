@@ -12,6 +12,10 @@ namespace TestInConsoleApp
         //你可以假定二进制数不包含前导零位。
         public int FindComplement(int num)
         {
+            if (num == 0)
+            {
+                return num;
+            }
             int temp = num, c = 0;
             Console.WriteLine("Temp "+Convert.ToString(temp,2));
             Console.WriteLine("c " + Convert.ToString(c, 2));
