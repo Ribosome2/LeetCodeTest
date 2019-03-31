@@ -47,6 +47,7 @@
     <Compile Include="Array_AddToArrayForm.cs" />
     <Compile Include="Array_ArrayPairSum.cs" />
     <Compile Include="Array_CalPoints.cs" />
+    <Compile Include="Array_ContainsDuplicate.cs" />
     <Compile Include="Array_DistributeCandies.cs" />
     <Compile Include="Array_FindContentChildren.cs" />
     <Compile Include="Array_FindDisappearedNumbers.cs" />
