@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TestInConsoleApp
 {
@@ -10,13 +11,13 @@ namespace TestInConsoleApp
         {
             int result = 0;
             int maxCount = 0;
-            Dictionary<int,int> dict=new Dictionary<int,int>();
+            Dictionary<int, int> dict = new Dictionary<int, int>();
             for (int i = 0; i < nums.Length; i++)
             {
                 var n = nums[i];
-                if(dict.ContainsKey(n))
+                if (dict.ContainsKey(n))
                 {
-                    dict[n] = dict[n]+ 1;
+                    dict[n] = dict[n] + 1;
                 }
                 else
                 {
@@ -28,14 +29,15 @@ namespace TestInConsoleApp
                     result = n;
                     maxCount = dict[n];
                 }
-                
+
             }
+
             return result;
         }
 
         public int MajorityElement1(int[] nums)
         {
-           //计数法
+            //计数法
             int count = 1;
             int num = nums[0];
             for (int i = 1; i < nums.Length; i++)
@@ -54,7 +56,14 @@ namespace TestInConsoleApp
                     }
                 }
             }
+
             return num;
+        }
+
+        public int MajorityElement2(int[] nums)
+        {
+            Array.Sort(nums);
+            return nums[nums.Length / 2];
         }
     }
 }
