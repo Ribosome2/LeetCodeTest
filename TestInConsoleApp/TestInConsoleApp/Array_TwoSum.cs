@@ -47,5 +47,29 @@
            
             return new int[]{-1,-1};
         }
+
+        public int[] TwoSum1(int[] numbers, int target)
+        {
+            //双指针法：
+            int left = 0;
+            int right = numbers.Length - 1;
+            while (left<right)
+            {
+                int sum = numbers[left] + numbers[right];
+                if (sum == target)
+                {
+                    return new[] {left + 1, right + 1};
+                }else if (sum > target)
+                {
+                    right--;
+                }
+                else
+                {
+                    left++;
+                }
+            }
+
+            return new int[] { -1, -1 };
+        }
     }
 }
