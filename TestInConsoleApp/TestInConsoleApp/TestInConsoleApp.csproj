@@ -88,6 +88,7 @@
     <Compile Include="Int_MySqrt.cs" />
     <Compile Include="Int_PlusOne.cs" />
     <Compile Include="Int_ReachNumber.cs" />
+    <Compile Include="Int_TrailingZeroes.cs" />
     <Compile Include="IsBracketsValid.cs" />
     <Compile Include="IsCanWinNim.cs" />
     <Compile Include="IsCycleLinkList.cs" />
