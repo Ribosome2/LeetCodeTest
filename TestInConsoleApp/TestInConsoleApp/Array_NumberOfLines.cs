@@ -24,5 +24,23 @@ namespace TestInConsoleApp
             }
             return new[] {line, 100-lastWidth};
         }
+
+        public int[] NumberOfLines1(int[] widths, string S)
+        {
+            int[] arr = new int[] { 0, 0 };
+            for (int i = 0; i < S.Length; i++)
+            {
+                int width = widths[S[i] - 'a'];
+                if (width > arr[1])
+                {
+                    arr[1] = 100;
+                    arr[0]++;
+                }
+                arr[1] -= width;
+            }
+
+            arr[1] = 100 - arr[1];
+            return arr;
+        }
     }
 }
