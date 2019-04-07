@@ -68,6 +68,7 @@
     <Compile Include="Array_NumberOfLines.cs" />
     <Compile Include="Array_RottingOrange.cs" />
     <Compile Include="Array_SortedSquares.cs" />
+    <Compile Include="Array_SubdomainVisits.cs" />
     <Compile Include="Array_TwoSum.cs" />
     <Compile Include="Arr_IsMonotonic.cs" />
     <Compile Include="BinaryMath.cs" />

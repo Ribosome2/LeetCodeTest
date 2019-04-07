@@ -11,8 +11,8 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_NumberOfLines();
-            test.NumberOfLines(null, "abcd");
+            var test = new Array_SubdomainVisits();
+            test.SubdomainVisits(new string[]{"9001 discuss.leetcode.com"});
          
 
             Console.Read();
