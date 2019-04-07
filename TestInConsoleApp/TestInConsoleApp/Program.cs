@@ -11,8 +11,13 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_SubdomainVisits();
-            test.SubdomainVisits(new string[]{"9001 discuss.leetcode.com"});
+            var test = new Array_FlipAndInvertImage();
+            int[][] arr = new int[3][];
+            arr[0]=new int[]{1,1,0};
+            arr[1] = new int[] { 1, 0, 1 };
+            arr[2] = new int[] { 0, 0, 0 };
+            test.FlipAndInvertImage1(arr);
+          
          
 
             Console.Read();
