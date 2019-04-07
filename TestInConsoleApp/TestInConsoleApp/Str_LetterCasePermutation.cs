@@ -6,78 +6,38 @@ namespace TestInConsoleApp
 {
     public class Str_LetterCasePermutation
     {
-        //给定一个字符串S，通过将字符串S中的每个字母转变大小写，我们可以获得一个新的字符串。返回所有可能得到的字符串集合。
-        public IList<string> LetterCasePermutation(string S)
+
+        public List<String> LetterCasePermutation(String S)
         {
-            List<string> list = new List<string>();
-
-            var chArray = S.ToCharArray();
-            int flipNum = 0;
-            for (int i = 0; i < chArray.Length; i++)
-            {
-               
-                var ch = chArray[i];
-                flipNum = GetFlipNum(ch);
-                if (flipNum != 0)
-                {
-                    if (SearchToEnd(i, chArray, list))
-                    {
-                        chArray[i] = (char)(ch + flipNum);
-                        SearchToEnd(i, chArray, list);
-                    }
-                    else  //后面已经没有字母了
-                    {
-                        if (list.Count == 0)
-                        {
-                            list.Add(new string(chArray));
-                            chArray[i] = (char)(ch + flipNum);
-                            list.Add(new string(chArray));
-                        }
-                    }
-                    break;
-                   
-                }
-            }
-
-            if (list.Count == 0)  //说明没有字母，只要字符串原型一种排列
-            {
-                list.Add(S);
-            }
-            return list;
+            List<string> result = new List<string>();
+            char[] c = S.ToCharArray();
+            Permuta(result, c, 0);
+            return result;
         }
-
-        private static bool SearchToEnd(int startIndex, char[] chArray, List<string> list)
+        //回溯
+        private void Permuta(List<String> list, char[] a, int n)
         {
-            bool hasLetter = false;
-            for (int j = startIndex + 1; j < chArray.Length; j++)
+            if (n >= a.Length)
             {
-                int curFlip = GetFlipNum(chArray[j]);
-                if (curFlip != 0)
-                {
-                    hasLetter = true;
-                    list.Add(new string(chArray));
-                    chArray[j] = (char) (chArray[j] + curFlip);
-                    list.Add(new string(chArray));
-                }
+                list.Add(new String(a));
+                return;
             }
-
-            return hasLetter;
-        }
-
-        private static int GetFlipNum(char ch)
-        {
-            int flipNum;
-            flipNum = 0;
-            if (ch >= 'a' && ch <= 'z')
+            char c = a[n];
+            if (c >= 'a' && c <= 'z')
             {
-                flipNum =- 32;
+                a[n] = (char)(c - 32);
+                Permuta(list, a, n + 1);
+                //递归完了后数组复原
+                a[n] = c;
             }
-            else if (ch >= 'A' && ch <= 'Z')
+            else if (c >= 'A' && c <= 'Z')
             {
-                flipNum = 32;
+                a[n] = (char)(c + 32);
+                Permuta(list, a, n + 1);
+                a[n] = c;
             }
+            Permuta(list, a, n + 1);
 
-            return flipNum;
         }
     }
 }
