@@ -60,6 +60,7 @@
     <Compile Include="Array_Intersection.cs" />
     <Compile Include="Array_IsToeplitzMatrix.cs" />
     <Compile Include="Array_KClosestToOrigin.cs" />
+    <Compile Include="Array_LetterCombinations.cs" />
     <Compile Include="Array_MajorityElement.cs" />
     <Compile Include="Array_MatrixReshape.cs" />
     <Compile Include="Array_MaxProfit.cs" />
