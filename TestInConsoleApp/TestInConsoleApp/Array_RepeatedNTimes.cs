@@ -52,18 +52,17 @@ namespace TestInConsoleApp
             return 0;
         }
         
+        //大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。
+        //根据这这句话可得只有一个重复的元素
         public int RepeatedNTimes2(int[] A)
         {
             for (int i = 0; i < A.Length; i++)
             {
-                int key = A[i];
-                //大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。
-                //根据这这句话可得只有一个重复的元素
                 for (int j = i + 1; j < A.Length; j++)
                 {
-                    if (A[j] == key)
+                    if (A[j] == A[i])
                     {
-                        return key;
+                        return A[i];
                     }
                 }
             }
