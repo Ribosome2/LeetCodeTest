@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -37,6 +38,7 @@ namespace TestInConsoleApp
         }
         public  void Swap(int[] chs,int i,int j)
         {
+            Console.WriteLine("Swap "+chs[i]+"  "+chs[j]);
             var  temp=chs[i];
             chs[i]=chs[j];
             chs[j]=temp;

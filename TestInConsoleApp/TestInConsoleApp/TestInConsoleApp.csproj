@@ -142,6 +142,7 @@
     <Compile Include="Str_StrWithout3a3b.cs" />
     <Compile Include="Str_ToLowerCase.cs" />
     <Compile Include="TreeLevelOrder.cs" />
+    <Compile Include="Tree_FindSecondMinimumValue.cs" />
     <Compile Include="Tree_HasPathSum.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
     <Compile Include="Tree_LevelOrderBottom.cs" />
