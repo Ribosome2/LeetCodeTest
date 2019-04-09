@@ -21,17 +21,13 @@ namespace TestInConsoleApp
         };
         public IList<string> LetterCombinations(string digits)
         {
+            if (digits == null || digits.Length == 0)
+            {
+                return null;
+            }
             List<string> list=new List<string>();
             char[] chArr=new char[digits.Length];
-            for (int i = 0; i < digits.Length; i++)
-            {
-                string str = NumDict[digits[i]];
-                for (int j = 0; j < str.Length; j++)
-                {
-                    chArr[i] = str[j];
-                    SearchToEnd(list,chArr,ref digits,i+1);
-                }
-            }
+            SearchToEnd(list, chArr, ref digits, 0);
             return list;
         }
 
