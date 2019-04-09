@@ -21,38 +21,30 @@ namespace TestInConsoleApp
         };
         public IList<string> LetterCombinations(string digits)
         {
-            List<string> list=new List<string>();
-            char[] chArr=new char[digits.Length];
-            for (int i = 0; i < digits.Length; i++)
+            List<string> list = new List<string>();
+            if (digits == null || digits.Length == 0)
             {
-                var key = digits[i];
-                if (!NumDict.ContainsKey(key))
-                {
-                    Console.WriteLine("No key "+key);
-                    continue;
-                }
-                string str = NumDict[key];
-                for (int j = 0; j < str.Length; j++)
-                {
-                    chArr[i] = str[j];
-                    SearchToEnd(list,chArr,ref str,j);
-                }
+                return list;
             }
+           
+            char[] chArr=new char[digits.Length];
+            SearchToEnd(list, chArr, ref digits, 0);
             return list;
         }
 
-        void SearchToEnd(List<string> list, char[] chArr,ref string str,int index)
+        void SearchToEnd(List<string> list, char[] chArr, ref string digits,int index)
         {
-            if (index >= chArr.Length)
+            if (index >= digits.Length)
             {
                 list.Add(new string(chArr));
+                return;
             }
-            for (int j = index+1; j < str.Length; j++)
+            string str = NumDict[digits[index]];
+            for (int j = 0; j < str.Length; j++)
             {
                 chArr[index] = str[j];
-                SearchToEnd(list, chArr, ref str, index+1);
+                SearchToEnd(list, chArr, ref digits, index+1);
             }
-            SearchToEnd(list, chArr,ref str, index+1);
         }
     }
 }

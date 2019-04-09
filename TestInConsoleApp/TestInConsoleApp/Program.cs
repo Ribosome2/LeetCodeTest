@@ -13,8 +13,13 @@ namespace TestInConsoleApp
         {
             var test = new Array_LetterCombinations();
 
-            test.LetterCombinations("23");
-         
+            var ret=test.LetterCombinations("23");
+            string str = "result ";
+            for (int i = 0; i < ret.Count; i++)
+            {
+                str += " "+ret[i];
+            }
+            Console.WriteLine(str);
 
             Console.Read();
         }
