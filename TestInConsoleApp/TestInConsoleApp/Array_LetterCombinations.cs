@@ -37,9 +37,11 @@ namespace TestInConsoleApp
             if (index >= digits.Length)
             {
                 list.Add(new string(chArr));
+                Console.WriteLine("Add  "+ new string(chArr));
                 return;
             }
             string str = NumDict[digits[index]];
+            Console.WriteLine("str "+str+" index "+index);
             for (int j = 0; j < str.Length; j++)
             {
                 chArr[index] = str[j];
