@@ -11,20 +11,11 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new Array_Permute();
+            var test = new Array_RepeatedNTimes();
 
-            var ret=test.Permute(new int[]{1,2,3});
-            string str = "result ";
-            for (int i = 0; i < ret.Count; i++)
-            {
-                string comStr = "";
-                for (int j = 0; j < ret[i].Count; j++)
-                {
-                    comStr += ret[i][j];
-                }
-                str += " "+comStr;
-            }
-            Console.WriteLine(str);
+          
+           
+            Console.WriteLine(test.RepeatedNTimes(new int[]{2,1,2,5,3,2}));
 
             Console.Read();
         }
