@@ -62,6 +62,16 @@ namespace TestInConsoleApp
                 while (queue.Count>0)
                 {
                     maxDepth++;
+                    int count = queue.Count;
+                    while (count>0)
+                    {
+                        count--;
+                        var node = queue.Dequeue();
+                        for (int i = 0; i < node.children.Count; i++)
+                        {
+                            queue.Enqueue(node.children[i]);
+                        }
+                    }
                 }
 
                 return maxDepth ;
