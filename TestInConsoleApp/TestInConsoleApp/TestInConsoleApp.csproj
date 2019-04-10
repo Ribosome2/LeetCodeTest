@@ -115,6 +115,7 @@
     <Compile Include="NumArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuadTree_Intersect.cs" />
     <Compile Include="Queque_TwoQuequeAsStack.cs" />
     <Compile Include="RemoveDuplicateArrElement.cs" />
     <Compile Include="ReverseInt.cs" />
