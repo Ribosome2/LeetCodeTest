@@ -44,54 +44,22 @@ namespace TestInConsoleApp
                 return quadTree1;
             }
 
-            if (quadTree1.bottomLeft != null)
+            Node resultNode=new Node();
+            if (quadTree1.isLeaf && quadTree2.isLeaf)
             {
-                quadTree1.bottomLeft.val = GetNodeValue(quadTree1.bottomLeft) || GetNodeValue(quadTree2.bottomLeft);
-                Console.WriteLine("BL "+quadTree1.bottomLeft.val);
-                quadTree1.bottomLeft.isLeaf = true;
-            }
-
-            if (quadTree1.bottomRight != null)
-            {
-                quadTree1.bottomRight.val = GetNodeValue(quadTree1.bottomRight) || GetNodeValue(quadTree2.bottomRight);
-                quadTree1.bottomRight.isLeaf = true;
-            }
-
-            if (quadTree1.topLeft != null)
-            {
-                quadTree1.topLeft.val = GetNodeValue(quadTree1.topLeft) || GetNodeValue(quadTree2.topLeft);
-                quadTree1.topLeft.isLeaf = true;
-            }
-
-            if (quadTree1.topRight != null)
-            {
-                quadTree1.topRight.val = GetNodeValue(quadTree1.topRight) || GetNodeValue(quadTree2.topRight);
-                quadTree1.topRight.isLeaf = true;
-            }
-
-         
-            return quadTree1;
-        }
-
-        bool GetNodeValue(Node quadTree1)
-        {
-            if (quadTree1 == null)
-            {
-                return false;
-            }
-
-            if (quadTree1.isLeaf)
-            {
-                return quadTree1.val;
+                resultNode.val = quadTree1.val || quadTree2.val;
+                resultNode.isLeaf = true;
             }
             else
             {
-                bool value= GetNodeValue(quadTree1.bottomLeft) || GetNodeValue(quadTree1.bottomRight) ||
-                            GetNodeValue(quadTree1.topLeft) || GetNodeValue(quadTree1.topRight);
-                quadTree1.val = value;
-                quadTree1.isLeaf = true;
-                return value;
+                
             }
+            
+            
+         
+            return resultNode;
         }
+
+       
     }
 }

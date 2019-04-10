@@ -149,6 +149,7 @@
     <Compile Include="Tree_HasPathSum.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
     <Compile Include="Tree_LevelOrderBottom.cs" />
+    <Compile Include="Tree_SearchBST.cs" />
     <Compile Include="Tree_SortedArrayToBST.cs" />
   </ItemGroup>
   <ItemGroup>
