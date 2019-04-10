@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace TestInConsoleApp
 {
@@ -40,6 +41,30 @@ namespace TestInConsoleApp
                 }
 
                 return maxDepth+1;
+            }
+
+            public int MaxDepth1(Node root)
+            {
+                if (root == null)
+                {
+                    return 0;
+                }
+
+                if (root.children.Count == 0)
+                {
+                    return 1;
+                }
+
+                Queue<Node> queue=new Queue<Node>();
+                queue.Enqueue(root);
+
+                int maxDepth = 0;
+                while (queue.Count>0)
+                {
+                    maxDepth++;
+                }
+
+                return maxDepth ;
             }
         }
     }
