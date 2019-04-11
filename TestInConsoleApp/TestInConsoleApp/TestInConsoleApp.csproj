@@ -129,6 +129,7 @@
     <Compile Include="String_ValidPalindrome.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
     <Compile Include="Str_AddStrings.cs" />
+    <Compile Include="Str_BackspaceCompare.cs" />
     <Compile Include="Str_BuddyString.cs" />
     <Compile Include="Str_CommonChars.cs" />
     <Compile Include="Str_Compress.cs" />
