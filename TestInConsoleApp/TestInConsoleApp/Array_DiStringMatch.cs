@@ -18,22 +18,16 @@
                 {
                     arr[i] = min;
                     min++;
-                    if (i == S.Length - 1)
-                    {
-                        arr[i + 1] = max;
-                    }
                 }
                 else
                 {
                     arr[i] = max;
                     max--;
-                    if (i == S.Length - 1)
-                    {
-                        arr[i + 1] = min;
-                    }
+                    
                 }
             }
-
+            //最終只會剩下一個數了， 所以这里取min 或者max都是一样的
+            arr[arr.Length-1] = min;
             return arr;
         }
     }
