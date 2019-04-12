@@ -73,6 +73,7 @@
     <Compile Include="Array_Permute.cs" />
     <Compile Include="Array_RepeatedNTimes.cs" />
     <Compile Include="Array_RottingOrange.cs" />
+    <Compile Include="Array_ShortestToChar.cs" />
     <Compile Include="Array_SortedSquares.cs" />
     <Compile Include="Array_SubdomainVisits.cs" />
     <Compile Include="Array_TwoSum.cs" />

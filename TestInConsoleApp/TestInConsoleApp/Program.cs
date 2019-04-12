@@ -30,7 +30,7 @@ namespace TestInConsoleApp
             //node2.bottomLeft = new Node(true, true, null, null, null, null);
             //test.Intersect(node1, node2);
 
-            Console.WriteLine(new Str_BackspaceCompare());
+            Console.WriteLine(new Array_ShortestToChar().ShortestToChar("loveleetcode",'e'));
             Console.Read();
         }
 
