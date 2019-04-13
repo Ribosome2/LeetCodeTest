@@ -151,6 +151,7 @@
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_FindSecondMinimumValue.cs" />
     <Compile Include="Tree_HasPathSum.cs" />
+    <Compile Include="Tree_InvertTree.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
     <Compile Include="Tree_LevelOrderBottom.cs" />
     <Compile Include="Tree_MaxDepth.cs" />
