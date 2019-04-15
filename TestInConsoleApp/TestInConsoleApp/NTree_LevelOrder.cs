@@ -41,7 +41,7 @@ namespace TestInConsoleApp
                         list.Add(node.val);
                         for (int i = 0; i < node.children.Count; i++)
                         {
-                            
+                            queue.Enqueue(node.children[i]);
                         }
                         count--;
                     }
