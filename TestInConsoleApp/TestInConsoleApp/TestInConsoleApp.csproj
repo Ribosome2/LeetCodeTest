@@ -56,6 +56,7 @@
     <Compile Include="Array_FindMaxConsecutiveOnes.cs" />
     <Compile Include="Array_FindMissinNumber.cs" />
     <Compile Include="Array_FindRelativeRanks.cs" />
+    <Compile Include="Array_FindUnsortedSubarray.cs" />
     <Compile Include="Array_FlipAndInvertImage.cs" />
     <Compile Include="Array_FloodFill.cs" />
     <Compile Include="Array_Intersection.cs" />

@@ -40,8 +40,16 @@ namespace TestInConsoleApp
                     {
                         var node = queue.Dequeue();
                         stack.Push(node.val);
-//                        for(int i)
+                        for (int index = 0; index < node.children.Count; index++)
+                        {
+                            queue.Enqueue(node.children[node.children.Count-1-index]);
+                        }
                     }
+                }
+
+                while (stack.Count>0)
+                {
+                    list.Add(stack.Pop());
                 }
             }
             
