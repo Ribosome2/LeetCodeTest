@@ -15,7 +15,7 @@ namespace TestInConsoleApp
             char[] arr=new char[3];
 //            new Str_ReverseChaArray().ReverseCharArr(ref str, arr, 0, 2);
 //            Console.WriteLine(new string(arr));
-            Console.WriteLine(new Str_ReverseChaArray().ReverseStr("abcdefg",2));
+            Console.WriteLine(new Array_LargestTimeFromDigits().LargestTimeFromDigits(new int[]{2,0,6,6}));
             Console.Read();
         }
 
