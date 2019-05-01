@@ -23,7 +23,7 @@ namespace TestInConsoleApp
                     temp = ch;
                 }
             }
-            if ((S.Length -1)- left >= 3)
+            if (S.Length - left >= 3)
             {
                 resList.Add(new List<int>() { left, S.Length - 1 });
             }
