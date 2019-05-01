@@ -143,6 +143,7 @@
     <Compile Include="Str_CountSegments.cs" />
     <Compile Include="Str_DetectCapitalUse.cs" />
     <Compile Include="Str_FindTheDifference.cs" />
+    <Compile Include="Str_FindWords.cs" />
     <Compile Include="Str_FirstUniqueChar.cs" />
     <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="Str_LengthOfLastWord.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Tree_InvertTree.cs" />
     <Compile Include="Tree_IsSubtree.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
+    <Compile Include="Tree_IsUnivalTree.cs" />
     <Compile Include="Tree_LevelOrderBottom.cs" />
     <Compile Include="Tree_MaxDepth.cs" />
     <Compile Include="Tree_Postorder.cs" />
