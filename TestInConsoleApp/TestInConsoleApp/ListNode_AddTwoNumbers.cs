@@ -14,7 +14,8 @@ namespace TestInConsoleApp
         {
             ListNode node1 = l1;
             ListNode node2 = l2;
-            Queue<int> reQueque=new Queue<int>();
+            ListNode reList = new ListNode(-1);
+            var curNode = reList;
             int temp = 0;
             while (node1!=null || node2!=null)
             {
@@ -42,31 +43,24 @@ namespace TestInConsoleApp
                     num -= 10;
                     temp = 1;
                 }
-                
-                reQueque.Enqueue(num);
+
+                if (curNode.val < 0) //the fist one
+                {
+                    curNode.val = num;
+                }
+                else
+                {
+                    curNode.next=new ListNode(num);
+                    curNode = curNode.next;
+                }
             }
 
             if (temp == 1)
             {
-                reQueque.Enqueue(1);
+                curNode.next = new ListNode(1);
             }
 
-            if (reQueque.Count == 0)
-            {
-                return null;
-            }
-            else
-            {
-                ListNode re=new ListNode(reQueque.Dequeue());
-                var curNode = re;
-                while (reQueque.Count>0)
-                {
-                    curNode.next=new ListNode(reQueque.Dequeue());
-                    curNode = curNode.next;
-                }
-
-                return re;
-            }
+            return reList;
         }
     }
 }
