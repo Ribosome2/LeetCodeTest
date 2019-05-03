@@ -77,6 +77,7 @@
     <Compile Include="Array_RottingOrange.cs" />
     <Compile Include="Array_ShortestToChar.cs" />
     <Compile Include="Array_SortArrayByParity.cs" />
+    <Compile Include="Array_SortArrayByParityII.cs" />
     <Compile Include="Array_SortedSquares.cs" />
     <Compile Include="Array_SubdomainVisits.cs" />
     <Compile Include="Array_TwoSum.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="RomanStrToInt.cs" />
     <Compile Include="RotatekArray.cs" />
     <Compile Include="RotateMatrix.cs" />
+    <Compile Include="Solution.cs" />
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="String_ValidPalindrome.cs" />
     <Compile Include="StrUncommonFromSentences.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="Tree_Preorder.cs" />
     <Compile Include="Tree_SearchBST.cs" />
     <Compile Include="Tree_SortedArrayToBST.cs" />
+    <Compile Include="Tree_SumNumbers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

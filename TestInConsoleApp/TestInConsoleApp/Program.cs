@@ -13,9 +13,8 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-//            new Str_ReverseChaArray().ReverseCharArr(ref str, arr, 0, 2);
-//            Console.WriteLine(new string(arr));
-            Console.WriteLine(new Array_LargestTimeFromDigits().LargestTimeFromDigits(new int[]{2,0,6,6}));
+
+            Console.WriteLine(new Array_SortArrayByParityII().SortArrayByParityII(new int[]{ 4, 2, 5, 7 }));
             Console.Read();
         }
 
