@@ -1,4 +1,6 @@
-﻿namespace TestInConsoleApp
+﻿using System.Collections.Generic;
+
+namespace TestInConsoleApp
 {
     public class Array_SortArrayByParityII
     {
@@ -7,46 +9,63 @@
 //        你可以返回任何满足上述条件的数组作为答案。
         public int[] SortArrayByParityII(int[] A)
         {
-            int modValue = 0;
-            for (int i = 0; i < A.Length-1; i++)
+            Queue<int> oddQueue = new Queue<int>();//record
+            Queue<int> evenQueque = new Queue<int>();
+            for (int i = 0; i < A.Length; i++)
             {
-                if (A[i] % 2 != modValue)
+                int num = A[i];
+                if ((num & 1) == 0) 
                 {
-                    for (int j = i + 1; j < A.Length; j++)
+                    if ((i & 1) != 0)
                     {
-                        if (A[j] % 2 == modValue)
-                        {
-                            int temp = A[j];
-                            A[j] = A[i];
-                            A[i] = temp;
-                        }
+                        evenQueque.Enqueue(i);
                     }
                 }
+                else
+                {
+                    if ((i & 1) == 0)
+                    {
+                        oddQueue.Enqueue(i);
+                    }
+                }
+            }
 
-                modValue = modValue == 1 ? 0 : 1;
+            while (evenQueque.Count > 0)
+            {
+                int oddIndex= evenQueque.Dequeue();
+                int evenIndex = oddQueue.Dequeue();
+                int tem = A[oddIndex];
+                A[oddIndex] = A[evenIndex];
+                A[evenIndex] = tem;
             }
             return A;
         }
 
         public int[] SortArrayByParity2(int[] A)
         {
-            int modValue = 0;
-            for (int i = 0; i < A.Length - 1; i++)
+            Queue<int> oddQueue = new Queue<int>();
+            Queue<int> evenQueque = new Queue<int>();
+            for (int i = 0; i < A.Length; i++)
             {
-                if (A[i] % 2 != modValue)
+                int num = A[i];
+                if (num % 2 == 0)
                 {
-                    for (int j = i + 1; j < A.Length; j++)
-                    {
-                        if (A[j] % 2 == modValue)
-                        {
-                            int temp = A[j];
-                            A[j] = A[i];
-                            A[i] = temp;
-                        }
-                    }
+                    evenQueque.Enqueue(num);
                 }
+                else
+                {
+                    oddQueue.Enqueue(num);
+                }
+            }
 
-                modValue = modValue == 1 ? 0 : 1;
+            int index = 0;
+            while (evenQueque.Count > 0)
+            {
+                A[index] = evenQueque.Dequeue();
+                index++;
+
+                A[index] = oddQueue.Dequeue();
+                index++;
             }
             return A;
         }
