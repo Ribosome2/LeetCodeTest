@@ -70,6 +70,7 @@
     <Compile Include="Array_MaxSubArray.cs" />
     <Compile Include="Array_MergeTowArray.cs" />
     <Compile Include="Array_MoveZeros.cs" />
+    <Compile Include="Array_NextGreaterElements.cs" />
     <Compile Include="Array_NumberOfLines.cs" />
     <Compile Include="Array_NumJewelsInStones.cs" />
     <Compile Include="Array_Permute.cs" />
