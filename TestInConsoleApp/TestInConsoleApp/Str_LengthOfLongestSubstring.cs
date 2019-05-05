@@ -7,7 +7,7 @@ namespace TestInConsoleApp
         //给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度
         public int LengthOfLongestSubstring(string s)
         {
-            int left = 0;
+            int left = 0;//无重复子串出现的左索引
             int max = 0;
             var size = s.Length;
             for (int j = 0; j < size; j++)

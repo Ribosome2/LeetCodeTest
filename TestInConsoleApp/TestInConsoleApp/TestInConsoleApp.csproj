@@ -154,6 +154,7 @@
     <Compile Include="Str_IsPalindrome.cs" />
     <Compile Include="Str_LargeGroupPositions.cs" />
     <Compile Include="Str_LengthOfLastWord.cs" />
+    <Compile Include="Str_LengthOfLongestSubstring.cs" />
     <Compile Include="Str_LetterCasePermutation.cs" />
     <Compile Include="Str_RepeatedSubstringPattern.cs" />
     <Compile Include="Str_ReverseChaArray.cs" />
