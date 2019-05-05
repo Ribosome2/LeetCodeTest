@@ -109,6 +109,7 @@
     <Compile Include="IsCycleLinkList.cs" />
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="JudgeCircle.cs" />
+    <Compile Include="KthLargest_Test.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />
     <Compile Include="LinkList_DeleteDuplicates.cs" />
