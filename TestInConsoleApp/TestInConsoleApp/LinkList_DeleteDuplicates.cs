@@ -21,41 +21,32 @@ namespace TestInConsoleApp
 
         ListNode FindUniqueNode(ListNode node)
         {
-            if (node != null)
+            while (node!=null)
             {
-                while (node!=null)
+                if (node.next == null)
                 {
-                    if (node.next == null)
-                    {
-                        return node;
-                    }
-                    else
-                    {
-                        if (node.next.val != node.val)
-                        {
-                            return node;
-                        }
-                        else
-                        {
-                            //unlink all duplicate element
-                            ListNode nextNode = node.next;
-                            while (nextNode!=null)
-                            {
-                                if (nextNode.val != node.val)
-                                {
-                                    break;
-                                }
-
-                                nextNode = nextNode.next;
-                            }
-                            
-                            node.next = nextNode;
-                        }
-                        node = node.next;
-                    }
+                    return node;
                 }
                 
+                if (node.next.val != node.val)
+                {
+                    return node;
+                }
+                    
+                //unlink all duplicate element
+                ListNode nextNode = node.next;
+                while (nextNode!=null)
+                {
+                    if (nextNode.val != node.val)
+                    {
+                        break;
+                    }
+
+                    nextNode = nextNode.next;
+                }
+                node = nextNode;
             }
+                
             return null;
         }
     }
