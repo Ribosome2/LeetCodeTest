@@ -1,4 +1,7 @@
-﻿namespace TestInConsoleApp
+﻿using System;
+using System.Diagnostics;
+
+namespace TestInConsoleApp
 {
     public class LinkList_DeleteDuplicates
     {
@@ -9,7 +12,7 @@
             var curNode = preNode;
             while (curNode!=null)
             {
-                curNode.next = FindUniqueNode(curNode);
+                curNode.next = FindUniqueNode(curNode.next);
                 curNode = curNode.next;
             }
 

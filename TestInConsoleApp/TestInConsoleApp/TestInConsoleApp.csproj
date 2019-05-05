@@ -111,6 +111,7 @@
     <Compile Include="JudgeCircle.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />
+    <Compile Include="LinkList_DeleteDuplicates.cs" />
     <Compile Include="LinkList_MiddleNode.cs" />
     <Compile Include="LinkList_RemoveDuplicate.cs" />
     <Compile Include="LinkList_RemoveNthFromEnd.cs" />

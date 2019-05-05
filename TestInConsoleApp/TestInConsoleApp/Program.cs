@@ -13,8 +13,12 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-
-            Console.WriteLine(new Array_SortArrayByParityII().SortArrayByParityII(new int[]{ 4, 2, 5, 7 }));
+            ListNode listNode=new ListNode(1);
+            listNode.next=new ListNode(2);
+            listNode.next.next=new ListNode(2);
+            listNode.next.next.next=new ListNode(2);
+            listNode.next.next.next.next=new ListNode(5);
+            Console.WriteLine(new LinkList_DeleteDuplicates().DeleteDuplicates(listNode));
             Console.Read();
         }
 
