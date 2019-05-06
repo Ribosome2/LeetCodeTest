@@ -101,6 +101,7 @@
     <Compile Include="Int_HammingWeight.cs" />
     <Compile Include="Int_InHappyNumber.cs" />
     <Compile Include="Int_IsPerfectSquare.cs" />
+    <Compile Include="Int_IsUgly.cs" />
     <Compile Include="Int_MySqrt.cs" />
     <Compile Include="Int_PlusOne.cs" />
     <Compile Include="Int_ReachNumber.cs" />
