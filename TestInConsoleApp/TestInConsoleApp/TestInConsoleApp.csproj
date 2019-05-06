@@ -171,6 +171,7 @@
     <Compile Include="Tree_IsSubtree.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
     <Compile Include="Tree_IsUnivalTree.cs" />
+    <Compile Include="Tree_LeafSimilar.cs" />
     <Compile Include="Tree_LevelOrderBottom.cs" />
     <Compile Include="Tree_MaxDepth.cs" />
     <Compile Include="Tree_Postorder.cs" />
