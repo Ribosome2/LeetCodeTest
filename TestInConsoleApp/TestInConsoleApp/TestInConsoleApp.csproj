@@ -83,6 +83,7 @@
     <Compile Include="Array_SubdomainVisits.cs" />
     <Compile Include="Array_TwoSum.cs" />
     <Compile Include="Arr_IsMonotonic.cs" />
+    <Compile Include="BinaryGap.cs" />
     <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="LongestCommonPrefix.cs" />
     <Compile Include="MatrixTranspose.cs" />
     <Compile Include="MaxTreeDepth.cs" />
+    <Compile Include="MaxUncrossedLines_Test.cs" />
     <Compile Include="MinStack.cs" />
     <Compile Include="MinTreeDepth.cs" />
     <Compile Include="MyQueue.cs" />
