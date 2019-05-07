@@ -35,6 +35,7 @@ namespace TestInConsoleApp
         }
         
         
+        //复杂度O(N2!+N1) 
         public int[] NextGreaterElement1(int[] nums1, int[] nums2) {
             int[] re=new int[nums1.Length];
             
