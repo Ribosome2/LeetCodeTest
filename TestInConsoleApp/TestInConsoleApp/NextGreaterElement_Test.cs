@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace TestInConsoleApp
 {
     public class NextGreaterElement_Test
@@ -11,6 +13,7 @@ namespace TestInConsoleApp
                 re[i] = FindNextGreater(nums1[i], nums2);
             }
             return re;
+            //复杂度 N1*N2
         }
 
         int FindNextGreater(int num, int[] arr)
@@ -29,6 +32,34 @@ namespace TestInConsoleApp
                 }
             }
             return -1;
+        }
+        
+        
+        public int[] NextGreaterElement1(int[] nums1, int[] nums2) {
+            int[] re=new int[nums1.Length];
+            
+            
+            Dictionary<int, int> tempDict=new Dictionary<int,int>();
+            for (int index = 0; index < nums2.Length; index++)
+            {
+                int num = nums2[index];
+                tempDict[num] = -1;
+                for (int j = index + 1; j < nums2.Length; j++)
+                {
+                    if (nums2[j] > num)
+                    {
+                        tempDict[num] = nums2[j];
+                        break;
+                    }
+                }
+            }
+            
+            
+            for (int i = 0; i < nums1.Length; i++)
+            {
+                re[i] = tempDict[nums1[i]];
+            }
+            return re;
         }
     }
 }
