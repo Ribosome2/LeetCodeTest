@@ -169,6 +169,7 @@
     <Compile Include="TreeLevelOrder.cs" />
     <Compile Include="Tree_FindSecondMinimumValue.cs" />
     <Compile Include="Tree_HasPathSum.cs" />
+    <Compile Include="Tree_InorderTraversal.cs" />
     <Compile Include="Tree_InvertTree.cs" />
     <Compile Include="Tree_IsSubtree.cs" />
     <Compile Include="Tree_IsSymmetric.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Tree_MaxDepth.cs" />
     <Compile Include="Tree_Postorder.cs" />
     <Compile Include="Tree_Preorder.cs" />
+    <Compile Include="Tree_RangeSumBST.cs" />
     <Compile Include="Tree_SearchBST.cs" />
     <Compile Include="Tree_SortedArrayToBST.cs" />
     <Compile Include="Tree_SumNumbers.cs" />
