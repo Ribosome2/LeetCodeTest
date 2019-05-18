@@ -13,12 +13,15 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-            ListNode listNode=new ListNode(1);
-            listNode.next=new ListNode(2);
-            listNode.next.next=new ListNode(2);
-            listNode.next.next.next=new ListNode(2);
-            listNode.next.next.next.next=new ListNode(5);
-            Console.WriteLine(new LinkList_DeleteDuplicates().DeleteDuplicates(listNode));
+            new TwoCitySchedCost_Test().TwoCitySchedCost(new int[6][]
+            {
+               new int[]{259,270 },
+               new int[]{448,54 },
+               new int[]{926,667 },
+               new int[]{184,139 },
+                new int[]{840,118 },
+                new int[]{577,469 },
+            });
             Console.Read();
         }
 
