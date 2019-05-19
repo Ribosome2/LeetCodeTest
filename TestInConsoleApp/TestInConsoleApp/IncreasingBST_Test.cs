@@ -11,8 +11,9 @@ namespace TestInConsoleApp
             {
                 return null;
             }
-            Queue<int> dataContainer=new Queue<int>();
             Stack<TreeNode> stack=new Stack<TreeNode>();
+            TreeNode resultRoot = new TreeNode(0);
+            TreeNode curNode = null;
             var tempNode = root;
             while (stack.Count>0 || tempNode!=null)
             {
@@ -24,16 +25,18 @@ namespace TestInConsoleApp
                 else
                 {
                     var node = stack.Pop();
-                    dataContainer.Enqueue(node.val);
+                    if (curNode == null)
+                    {
+                        resultRoot.val = node.val;
+                        curNode = resultRoot;
+                    }
+                    else
+                    {
+                        curNode.right=new TreeNode(node.val);
+                        curNode = curNode.right;
+                    }
                     tempNode = node.right;
                 }
-            }
-            TreeNode resultRoot=new TreeNode(dataContainer.Dequeue());
-            TreeNode curNode = resultRoot;
-            while (dataContainer.Count>0)
-            {
-                curNode.right=new TreeNode(dataContainer.Dequeue());
-                curNode = curNode.right;
             }
 
             return   resultRoot;
