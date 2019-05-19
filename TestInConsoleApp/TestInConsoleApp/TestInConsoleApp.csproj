@@ -89,6 +89,7 @@
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
+    <Compile Include="IncreasingBST_Test.cs" />
     <Compile Include="Int_AddDigits.cs" />
     <Compile Include="Int_BinarySearch.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="MaxUncrossedLines_Test.cs" />
     <Compile Include="MinDeletionSize_Test.cs" />
     <Compile Include="MinStack.cs" />
+    <Compile Include="MinSubArrayLen_Test.cs" />
     <Compile Include="MinTreeDepth.cs" />
     <Compile Include="MyQueue.cs" />
     <Compile Include="NextGreaterElement_Test.cs" />
