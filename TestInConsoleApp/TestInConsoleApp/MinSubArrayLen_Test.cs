@@ -24,7 +24,8 @@ namespace TestInConsoleApp
                     {
                         len=Math.Min(len, right - left + 1);
                     }
-                    sum -= nums[left++];
+                    sum -= nums[left];
+                    left++;
                 }
             }
             return len;
