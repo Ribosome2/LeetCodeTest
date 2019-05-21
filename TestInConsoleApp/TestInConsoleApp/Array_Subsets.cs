@@ -9,7 +9,6 @@ namespace TestInConsoleApp
         public IList<IList<int>> Subsets(int[] nums)
         {
             List<IList<int>> re=new List<IList<int>>();
-          
             for (int i = 0; i < nums.Length; i++)
             {
                 var num = nums[i];
