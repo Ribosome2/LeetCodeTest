@@ -13,6 +13,15 @@ namespace TestInConsoleApp
 //        最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 0。
         public int LastStoneWeight(int[] stones)
         {
+            if (stones.Length == 0)
+            {
+                return 0;
+            }
+            if (stones.Length ==1)
+            {
+                return stones[0];
+            }
+
             PriorityQueue<int> priorityQueue=new PriorityQueue<int>(stones.Length);
             for (int i = 0; i < stones.Length; i++)
             {
