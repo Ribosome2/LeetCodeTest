@@ -114,6 +114,7 @@
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="JudgeCircle.cs" />
     <Compile Include="KthLargest_Test.cs" />
+    <Compile Include="LastStoneWeight_Test.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />
     <Compile Include="LinkList_DeleteDuplicates.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Str_LengthOfLastWord.cs" />
     <Compile Include="Str_LengthOfLongestSubstring.cs" />
     <Compile Include="Str_LetterCasePermutation.cs" />
+    <Compile Include="Str_RemoveDuplicates.cs" />
     <Compile Include="Str_RepeatedSubstringPattern.cs" />
     <Compile Include="Str_ReverseChaArray.cs" />
     <Compile Include="Str_ReverseOnlyLetters.cs" />

@@ -13,15 +13,8 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-            new TwoCitySchedCost_Test().TwoCitySchedCost(new int[6][]
-            {
-               new int[]{259,270 },
-               new int[]{448,54 },
-               new int[]{926,667 },
-               new int[]{184,139 },
-                new int[]{840,118 },
-                new int[]{577,469 },
-            });
+           LastStoneWeight_Test test=new LastStoneWeight_Test();
+           Console.WriteLine(test.LastStoneWeight(new[] {1, 3, 45, 6, 12}));
             Console.Read();
         }
 
