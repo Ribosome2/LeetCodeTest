@@ -13,8 +13,10 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-           LastStoneWeight_Test test=new LastStoneWeight_Test();
-           Console.WriteLine(test.LastStoneWeight(new[] {1, 3, 45, 6, 12}));
+           var  test=new Tree_Connect();
+           Console.WriteLine(test.Connect(new Tree_Connect.Node(1,
+               new Tree_Connect.Node(2,new Tree_Connect.Node(4),new Tree_Connect.Node(5) ),
+               new Tree_Connect.Node(3,new Tree_Connect.Node(6),new Tree_Connect.Node(7)))));
             Console.Read();
         }
 
