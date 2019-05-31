@@ -35,7 +35,7 @@ namespace TestInConsoleApp
         //        初始状态下，所有 next 指针都被设置为 NULL。
 //        你只能使用常量级额外空间。
 //        使用递归解题也符合要求，本题中递归程序占用的栈空间不算做额外的空间复杂度。
-        public Node Connect(Node root)
+        public Node Connect1(Node root)
         {
             //队列方法层次遍历可以解题，但是应该不算常量级额外空间
             Queue<Node> queque=new Queue<Node>();
@@ -69,6 +69,29 @@ namespace TestInConsoleApp
                 }
 
             }
+            return root; 
+        }
+
+        /// <summary>
+        /// 递归的写法
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public Node Connect(Node root)
+        {
+            if (root == null)
+                return root;
+            if (root.left != null)
+            {
+                root.left.next = root.right;
+            }
+               
+            if (root.next != null && root.right != null)
+            {
+                root.right.next = root.next.left;
+            }
+            Connect(root.left);
+            Connect(root.right);
             return root;
         }
     }
