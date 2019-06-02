@@ -34,19 +34,19 @@ namespace TestInConsoleApp
             if (count >= k)
             {
                 nums[1] = num;
-                siftDown(1);
+                SiftDown(1);
             }
             else
             {
                 nums[++count] = num;
-                siftUp(count);
+                SiftUp(count);
             }
 
             return nums[1];
 
         }
 
-        private void siftUp(int index)
+        private void SiftUp(int index)
         {
             while (index > 1 && nums[index] < nums[index / 2])
             {
@@ -55,19 +55,26 @@ namespace TestInConsoleApp
             }
         }
 
-        private void siftDown(int index)
+        private void SiftDown(int index)
         {
             while (2 * index <= count)
             {
                 int j = 2 * index;
-                if (j < count && nums[j] > nums[j + 1]) j++;
-                if (nums[index] <= nums[j]) break;
+                if (j < count && nums[j] > nums[j + 1])
+                {
+                    j++;
+                }
+                if (nums[index] <= nums[j])
+                {
+                    break;
+                }
                 swap(index, j);
                 index = j;
             }
         }
 
         //build min heap
+        //构建最小堆
         private void heapify(int[] nums)
         {
             for (int i = 0; i < nums.Length; i++)
