@@ -146,6 +146,7 @@
     <Compile Include="RomanStrToInt.cs" />
     <Compile Include="RotatekArray.cs" />
     <Compile Include="RotateMatrix.cs" />
+    <Compile Include="SearchRotatedArray_Test.cs" />
     <Compile Include="Solution.cs" />
     <Compile Include="StrFindNeedleInHaystack.cs" />
     <Compile Include="String_ValidPalindrome.cs" />
