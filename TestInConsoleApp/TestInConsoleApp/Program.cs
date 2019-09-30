@@ -13,10 +13,8 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-           var  test=new Tree_Connect();
-           Console.WriteLine(test.Connect(new Tree_Connect.Node(1,
-               new Tree_Connect.Node(2,new Tree_Connect.Node(4),new Tree_Connect.Node(5) ),
-               new Tree_Connect.Node(3,new Tree_Connect.Node(6),new Tree_Connect.Node(7)))));
+           var  test=new Str_MutiplyNumber();
+            Console.WriteLine(test.Multiply("123", "24"));
             Console.Read();
         }
 

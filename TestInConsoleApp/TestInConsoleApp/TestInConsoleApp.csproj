@@ -167,6 +167,7 @@
     <Compile Include="Str_LengthOfLastWord.cs" />
     <Compile Include="Str_LengthOfLongestSubstring.cs" />
     <Compile Include="Str_LetterCasePermutation.cs" />
+    <Compile Include="Str_MutiplyNumber.cs" />
     <Compile Include="Str_RemoveDuplicates.cs" />
     <Compile Include="Str_RepeatedSubstringPattern.cs" />
     <Compile Include="Str_ReverseChaArray.cs" />
