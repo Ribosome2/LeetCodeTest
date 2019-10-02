@@ -16,22 +16,86 @@ namespace TestInConsoleApp
         {
             private TrieNode[] childList;
             public bool HasEndHere = false;
-            public void AddChild(int index)
+            public void AddChild(char ch)
             {
                 if (childList == null)
                 {
                     childList= new TrieNode[26];
                 }
-                childList[index]=new TrieNode();
+                childList[ch-'a']=new TrieNode();
             }
 
-            public TrieNode GetChildNode(int index)
+            public TrieNode GetChildNode(char c)
             {
                 if (childList != null)
                 {
-                    return childList[index];
+                    return childList[c-'a'];
                 }
                 return null;
+            }
+
+            public bool ContainKey(char c)
+            {
+                if (childList == null)
+                {
+                    return false;
+                }
+                return childList[c - 'a'] != null;
+            }
+
+            /// <summary>
+            /// 当前字符为‘.’ 的时候才会进这里
+            /// </summary>
+            /// <param name="word"></param>
+            /// <param name="startIndex"></param>
+            /// <returns></returns>
+            public bool CheckEveryChild(ref string word,int startIndex)
+            {
+               
+                if (childList != null)
+                {
+                    for (int i = 0; i < childList.Length; i++)
+                    {
+                        var child = childList[i];
+                        if (child!=null)
+                        {
+                            //通配任意字符的时候，如果已经是最后一个了，而且这一层有节点，就可以判断成功了
+                            if (child.HasEndHere && startIndex==word.Length)
+                            {
+                                return true;
+                            }
+
+                            TrieNode parentNode = child;
+                            for (int index = startIndex; index < word.Length; index++)
+                            {
+                                if (word[index] == '.')
+                                {
+                                    if (parentNode.CheckEveryChild(ref word, index + 1))
+                                    {
+                                        return true;
+                                    }
+                                    break;
+                                }
+                                else
+                                {
+                                    parentNode = parentNode.GetChildNode(word[index]);
+                                    if (parentNode == null)
+                                    {
+                                        break;
+                                    }
+
+                                    if (parentNode.HasEndHere && index == word.Length - 1)
+                                    {
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                return false;
             }
         }
 
@@ -51,12 +115,12 @@ namespace TestInConsoleApp
             TrieNode parentNode = root;
             for (int i = 0; i < word.Length; i++)
             {
-                int number = word[i] - 97;
-                if (parentNode.GetChildNode(number) == null)
+                var ch = word[i];
+                if (!parentNode.ContainKey(ch))
                 {
-                    parentNode.AddChild(number);
+                    parentNode.AddChild(ch);
                 }
-                parentNode = parentNode.GetChildNode(number);
+                parentNode = parentNode.GetChildNode(ch);
             }
             parentNode.HasEndHere = true;
         }
@@ -67,8 +131,26 @@ namespace TestInConsoleApp
             TrieNode parentNode = root;
             for (int i = 0; i < word.Length; i++)
             {
-                int number = word[i] - 97;
-                parentNode = parentNode.GetChildNode(number);
+                parentNode = parentNode.GetChildNode(word[i]);
+                if (parentNode == null)
+                {
+                    return false;
+                }
+            }
+
+            return parentNode.HasEndHere;
+        }
+
+        public bool SearchWithDotCheck(string word)
+        {
+            TrieNode parentNode = root;
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] == '.')
+                {
+                    return parentNode.CheckEveryChild(ref word, i + 1);
+                }
+                parentNode = parentNode.GetChildNode(word[i]);
                 if (parentNode == null)
                 {
                     return false;
@@ -84,8 +166,7 @@ namespace TestInConsoleApp
             TrieNode parentNode = root;
             for (int i = 0; i < prefix.Length; i++)
             {
-                int number = prefix[i] - 97;
-                parentNode = parentNode.GetChildNode(number);
+                parentNode = parentNode.GetChildNode(prefix[i]);
                 if (parentNode== null)
                 {
                     return false;
@@ -95,12 +176,5 @@ namespace TestInConsoleApp
             return true;
         }
     }
-
-    /**
-     * Your Trie object will be instantiated and called as such:
-     * Trie obj = new Trie();
-     * obj.Insert(word);
-     * bool param_2 = obj.Search(word);
-     * bool param_3 = obj.StartsWith(prefix);
-     */
+  
 }
