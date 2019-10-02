@@ -13,8 +13,13 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-           var  test=new Str_MutiplyNumber();
-            Console.WriteLine(test.Multiply("123", "24"));
+           var  test=new Trie();
+            test.Insert("apple");
+            Console.WriteLine(test.Search("apple"));
+            Console.WriteLine(test.Search("app"));
+            Console.WriteLine(test.StartsWith("app"));
+            test.Insert("app");
+            Console.WriteLine(test.Search("app"));
             Console.Read();
         }
 
