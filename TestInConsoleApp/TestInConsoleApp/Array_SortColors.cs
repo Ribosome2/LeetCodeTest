@@ -81,16 +81,26 @@ namespace TestInConsoleApp
             int leftIndex = 0;
             int rightIndex = nums.Length-1;
             int curIndex = 0;
-            while (curIndex<rightIndex)
+            while (curIndex<=rightIndex)
             {
                 switch (nums[curIndex])
                 {
                     case 0:
                     {
+                        Swap(nums,leftIndex,curIndex);
+                        leftIndex++;
+                        curIndex++;
                         break;
                     }
                     case 2:
                     {
+                        Swap(nums,rightIndex,curIndex);
+                        rightIndex--;
+                        break;
+                    }
+                    default:
+                    {
+                        curIndex++;
                         break;
                     }
                 }
