@@ -17,6 +17,7 @@ namespace TestInConsoleApp
 //        来源：力扣（LeetCode）
 //        链接：https://leetcode-cn.com/problems/binary-tree-tilt
 //        著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
         public int FindTilt(TreeNode root)
         {
             if (root == null)
@@ -47,6 +48,7 @@ namespace TestInConsoleApp
             return totalTilt;
         }
 
+
         int GetNumber(TreeNode root)
         {
             int number = 0;
@@ -58,5 +60,29 @@ namespace TestInConsoleApp
             }
             return number;
         }
+
+        private int totalTilt = 0;
+        public int FindTiltBetter(TreeNode root)
+        {
+            totalTilt = 0;
+            Traverse(root);
+            return totalTilt;
+        }
+
+        public int Traverse(TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            int leftSum = Traverse(root.left);
+            int rightSum = Traverse(root.right);
+            totalTilt += Math.Abs(leftSum - rightSum);
+            //关键点在这里，做遍历的时候把当前遍历到的跟的坡度算了，并且加到最值里面，
+            //比上面的实现省了重复计算子节点的和的过场
+            return leftSum + rightSum + root.val;
+        }
+
     }
 }
