@@ -13,17 +13,8 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-           var  test=new WordDictionary();
-            test.AddWord("a");
-//            test.AddWord("mad");
-//            test.AddWord("pad");
-            //            test.AddWord("runner");
-            //            Console.WriteLine(test.Search("pad"));
-            //            Console.WriteLine(test.Search("bad"));
-            //            Console.WriteLine(test.Search(".ad"));
-            //            Console.WriteLine(test.Search("b.."));
-            //            Console.WriteLine(test.Search("a.d."));
-            Console.WriteLine(test.Search(".a"));
+           var  test=new Str_DecodeString();
+            Console.WriteLine(test.DecodeString("3[a]2[bc]"));
             Console.Read();
         }
 

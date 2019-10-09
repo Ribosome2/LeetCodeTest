@@ -159,6 +159,7 @@
     <Compile Include="Str_Compress.cs" />
     <Compile Include="Str_CountAndSay.cs" />
     <Compile Include="Str_CountSegments.cs" />
+    <Compile Include="Str_DecodeString.cs" />
     <Compile Include="Str_DetectCapitalUse.cs" />
     <Compile Include="Str_FindTheDifference.cs" />
     <Compile Include="Str_FindWords.cs" />
