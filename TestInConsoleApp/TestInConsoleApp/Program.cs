@@ -13,8 +13,8 @@ namespace TestInConsoleApp
         {
             string str="abc";
             char[] arr=new char[3];
-           var  test=new Str_DecodeString();
-            Console.WriteLine(test.DecodeString("3[a]2[bc]"));
+           var  test=new IntegerReplacement_Test();
+            Console.WriteLine(test.IntegerReplacement(2147483647));
             Console.Read();
         }
 

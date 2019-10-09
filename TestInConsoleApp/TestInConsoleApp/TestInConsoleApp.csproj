@@ -92,6 +92,7 @@
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
     <Compile Include="IncreasingBST_Test.cs" />
+    <Compile Include="IntegerReplacement_Test.cs" />
     <Compile Include="Int_AddDigits.cs" />
     <Compile Include="Int_BinarySearch.cs" />
     <Compile Include="Int_ExcelTitleToNumber.cs" />
