@@ -11,10 +11,12 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            
-           var  test=new GetMaximumGold_Test();
-            var arr = new int[][] {new int[] {0, 6, 0}, new int[] { 5, 8, 7}, new int[] { 0, 9, 0}};
-            Console.WriteLine(test.GetMaximumGold(arr));
+
+            var test = new DistanceBetweenBusStops_Test();
+            ;
+            var arr = new int[] {14, 13, 4, 7, 10, 17, 8, 3, 2, 13,};
+
+        Console.WriteLine(test.DistanceBetweenBusStops(arr,2,9 ));
             Console.Read();
         }
 
