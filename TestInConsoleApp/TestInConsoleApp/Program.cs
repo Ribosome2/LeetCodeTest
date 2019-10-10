@@ -11,10 +11,10 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-            string str="abc";
-            char[] arr=new char[3];
-           var  test=new IntegerReplacement_Test();
-            Console.WriteLine(test.IntegerReplacement(2147483647));
+            
+           var  test=new GetMaximumGold_Test();
+            var arr = new int[][] {new int[] {0, 6, 0}, new int[] { 5, 8, 7}, new int[] { 0, 9, 0}};
+            Console.WriteLine(test.GetMaximumGold(arr));
             Console.Read();
         }
 

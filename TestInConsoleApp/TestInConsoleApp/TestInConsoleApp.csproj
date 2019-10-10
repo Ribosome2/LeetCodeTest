@@ -91,6 +91,7 @@
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
+    <Compile Include="GetMaximumGold_Test.cs" />
     <Compile Include="IncreasingBST_Test.cs" />
     <Compile Include="IntegerReplacement_Test.cs" />
     <Compile Include="Int_AddDigits.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Tree_AverageOfLevels.cs" />
     <Compile Include="Tree_Connect.cs" />
     <Compile Include="Tree_FindSecondMinimumValue.cs" />
+    <Compile Include="Tree_FindTilt.cs" />
     <Compile Include="Tree_HasPathSum.cs" />
     <Compile Include="Tree_InorderTraversal.cs" />
     <Compile Include="Tree_InvertTree.cs" />
