@@ -30,7 +30,10 @@ namespace TestInConsoleApp
                 int colCount = grid[row].Length;
                 for (int col = 0; col < colCount; col++)
                 {
-                    ret = Math.Max(ret, DoDFS(grid, row, col, rowCount - 1, colCount - 1));
+                    if (grid[row][col] != 0)
+                    {
+                        ret = Math.Max(ret, DoDFS(grid, row, col, rowCount - 1, colCount - 1));
+                    }
                 }
             }
             return ret;
