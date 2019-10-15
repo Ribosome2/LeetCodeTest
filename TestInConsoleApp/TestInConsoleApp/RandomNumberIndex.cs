@@ -33,7 +33,36 @@ namespace TestInConsoleApp
         public int Pick(int target)
         {
             var record = recordDict[target];
-            return record[new System.Random().Next(record.Count - 1)];
+            return record[new System.Random().Next(record.Count)];
+        }
+    }
+
+    class RandomNumberIndex2
+    {
+        private int[] nums;
+        public RandomNumberIndex2(int[] nums)
+        {
+            this.nums = nums;
+        }
+
+        public int Pick(int target)
+        {
+            int result = 0;
+            var rnd = new System.Random();
+            int count = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == target)
+                {
+                    count++;
+                    if (rnd.Next(count) == 0)
+                    {
+                        result = i;
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }
