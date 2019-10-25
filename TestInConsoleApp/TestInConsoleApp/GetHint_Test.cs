@@ -57,5 +57,37 @@ namespace TestInConsoleApp
             }
             return string.Format("{0}A{1}B",numA,numB);
         }
+
+        public string GetHint2(string secret, string guess)
+        {
+            int numA = 0;
+            int numB = 0;
+            int[] arr= new int[10];
+            var  missGuessList = new int[10];
+            for (int i = 0; i < guess.Length; i++)
+            {
+                var ch = guess[i];
+                if (ch == secret[i])
+                {
+                    numA++;
+                }
+                else
+                {
+                    missGuessList[ch-'0']++;
+                    var chA = secret[i];
+                    var index = chA - '0';
+                    arr[index]++;
+                }
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                numB += Math.Min(arr[i], missGuessList[i]);
+            }
+           
+            return string.Format("{0}A{1}B", numA, numB);
+        }
     }
+
+
 }
