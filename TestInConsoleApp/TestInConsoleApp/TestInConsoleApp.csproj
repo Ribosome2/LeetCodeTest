@@ -121,6 +121,7 @@
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="JudgeCircle.cs" />
     <Compile Include="KthLargest_Test.cs" />
+    <Compile Include="LastRemaining_Test.cs" />
     <Compile Include="LastStoneWeight_Test.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuadTree_Intersect.cs" />
     <Compile Include="Queque_TwoQuequeAsStack.cs" />
+    <Compile Include="RandomNumberIndex.cs" />
     <Compile Include="RecentCounterTest.cs" />
     <Compile Include="RemoveDuplicateArrElement.cs" />
     <Compile Include="ReverseInt.cs" />

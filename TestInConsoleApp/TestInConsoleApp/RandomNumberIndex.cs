@@ -36,7 +36,9 @@ namespace TestInConsoleApp
             return record[new System.Random().Next(record.Count)];
         }
     }
-
+    /// <summary>
+    /// 内存n,pickO(n)的写法
+    /// </summary>
     class RandomNumberIndex2
     {
         private int[] nums;
@@ -45,6 +47,7 @@ namespace TestInConsoleApp
             this.nums = nums;
         }
 
+       
         public int Pick(int target)
         {
             int result = 0;
