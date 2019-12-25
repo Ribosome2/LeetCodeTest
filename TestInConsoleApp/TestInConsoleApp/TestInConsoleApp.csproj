@@ -89,6 +89,8 @@
     <Compile Include="BinaryGap.cs" />
     <Compile Include="BinaryMath.cs" />
     <Compile Include="ClimbStairsTry.cs" />
+    <Compile Include="CodingGame\ASCIIArt.cs" />
+    <Compile Include="CodingGame\DontPanic.cs" />
     <Compile Include="CodingGame\HorseRacingDuals.cs" />
     <Compile Include="CodingGame\MIMITypeTest.cs" />
     <Compile Include="CountBits_Test.cs" />
