@@ -15,6 +15,9 @@ namespace TestInConsoleApp.CodingGame
             {
                 Id = index;
             }
+
+            
+
             public int Id;
             public List<SkyNetNode> Links =new List<SkyNetNode>();
             public bool IsGateWay;
@@ -31,7 +34,7 @@ namespace TestInConsoleApp.CodingGame
             SkyNetNode[] nodes = new SkyNetNode[N];
             for (int i = 0; i < N; i++)
             {
-                nodes[i]=new SkyNetNode();
+                nodes[i]=new SkyNetNode(i);
             }
 
             for (int i = 0; i < L; i++)
@@ -53,19 +56,32 @@ namespace TestInConsoleApp.CodingGame
             {
                 int SI = int.Parse(Console.ReadLine()); // The index of the node on which the Skynet agent is positioned this turn
 
-
+                int otherIndex = -1;
                 var agentLinks = nodes[SI].Links;
                 foreach (var node in agentLinks)
                 {
-                    
+                    if (node.IsGateWay)
+                    {
+                        otherIndex = node.Id;
+                        break;
+                    }
                 }
+
+                //没有直接连接到gateway的，只在周围连接里面随便断一个
+                if (otherIndex < 0)
+                {
+                    otherIndex = nodes[SI].Links[0].Id;
+                }
+
                 // Write an action using Console.WriteLine()
                 // To debug: Console.Error.WriteLine("Debug messages...");
 
 
                 // Example: 0 1 are the indices of the nodes you wish to sever the link between
-                Console.WriteLine("0 1");
+                Console.WriteLine(SI+" "+otherIndex);
             }
         }
+
+      
     }
 }
