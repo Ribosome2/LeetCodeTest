@@ -8,7 +8,7 @@ namespace TestInConsoleApp.CodingGame
 {
     class HorseRacingDuals
     {
-        static void Main(string[] args)
+        static void Main_No(string[] args)
         {
             int minDif = Int32.MaxValue;
             int N = int.Parse(Console.ReadLine());

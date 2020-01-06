@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayIntersection2.cs" />
     <Compile Include="ArraySearchInsert.cs" />
     <Compile Include="Array_AddToArrayForm.cs" />
     <Compile Include="Array_ArrayPairSum.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="DistanceBetweenBusStops_Test.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
+    <Compile Include="FreqAlphabets_Test.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
     <Compile Include="GetMaximumGold_Test.cs" />
     <Compile Include="IncreasingBST_Test.cs" />
@@ -128,7 +130,6 @@
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="JudgeCircle.cs" />
     <Compile Include="KthLargest_Test.cs" />
-    <Compile Include="LastRemaining_Test.cs" />
     <Compile Include="LastStoneWeight_Test.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />

@@ -23,7 +23,7 @@ namespace TestInConsoleApp.CodingGame
             public bool IsGateWay;
         }
 
-        static void Main(string[] args)
+        static void Main_No(string[] args)
         {
             string[] inputs;
             inputs = Console.ReadLine().Split(' ');

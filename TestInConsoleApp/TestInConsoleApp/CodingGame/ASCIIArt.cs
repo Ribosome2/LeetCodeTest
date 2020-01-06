@@ -8,7 +8,7 @@ namespace TestInConsoleApp.CodingGame
 {
     class ASCIIArt
     {
-        static void Main(string[] args)
+        static void Main_No(string[] args)
         {
             int L = int.Parse(Console.ReadLine());
             int H = int.Parse(Console.ReadLine());

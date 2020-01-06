@@ -9,7 +9,7 @@ namespace TestInConsoleApp.CodingGame
     class MIMITypeTest
     {
 
-        static void Main(string[] args)
+        static void Main_No(string[] args)
         {
             int N = int.Parse(Console.ReadLine()); // Number of elements which make up the association table.
             int Q = int.Parse(Console.ReadLine()); // Number Q of file names to be analyzed.

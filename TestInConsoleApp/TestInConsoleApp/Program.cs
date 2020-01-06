@@ -12,11 +12,11 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new DistanceBetweenBusStops_Test();
+            var test = new FreqAlphabets_Test();;
             ;
             var arr = new int[] {14, 13, 4, 7, 10, 17, 8, 3, 2, 13,};
 
-        Console.WriteLine(test.DistanceBetweenBusStops(arr,2,9 ));
+        Console.WriteLine(test.FreqAlphabets("10#11#12"));
             Console.Read();
         }
 

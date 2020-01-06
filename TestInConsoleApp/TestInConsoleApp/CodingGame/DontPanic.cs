@@ -8,7 +8,7 @@ namespace TestInConsoleApp.CodingGame
 {
     class DontPanic
     {
-        static void Main(string[] args)
+        static void Main_No(string[] args)
         {
             string[] inputs;
             inputs = Console.ReadLine().Split(' ');
