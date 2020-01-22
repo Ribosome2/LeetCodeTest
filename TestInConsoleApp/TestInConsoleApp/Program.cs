@@ -16,7 +16,9 @@ namespace TestInConsoleApp
             ;
             var arr = new int[] {14, 13, 4, 7, 10, 17, 8, 3, 2, 13,};
 
-        Console.WriteLine(test.FreqAlphabets("10#11#12"));
+        Console.WriteLine(new ComputeArena_Test().ComputeArea(-3,0,3,4,0,-1,9,2));
+
+
             Console.Read();
         }
 

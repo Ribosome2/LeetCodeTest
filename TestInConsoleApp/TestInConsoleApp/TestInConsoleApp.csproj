@@ -97,6 +97,7 @@
     <Compile Include="CodingGame\HorseRacingDuals.cs" />
     <Compile Include="CodingGame\MIMITypeTest.cs" />
     <Compile Include="CodingGame\SkynetRevolutionEpisode1.cs" />
+    <Compile Include="ComputeArena_Test.cs" />
     <Compile Include="CountBits_Test.cs" />
     <Compile Include="DayOfTheWeek_Test.cs" />
     <Compile Include="DistanceBetweenBusStops_Test.cs" />
