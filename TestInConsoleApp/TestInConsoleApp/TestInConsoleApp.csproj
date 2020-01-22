@@ -140,6 +140,7 @@
     <Compile Include="LinkList_RemoveNthFromEnd.cs" />
     <Compile Include="ListNode_AddTwoNumbers.cs" />
     <Compile Include="LongestCommonPrefix.cs" />
+    <Compile Include="LRUCache.cs" />
     <Compile Include="MatrixTranspose.cs" />
     <Compile Include="MaxNumberOfBalloons_Test.cs" />
     <Compile Include="MaxTreeDepth.cs" />
