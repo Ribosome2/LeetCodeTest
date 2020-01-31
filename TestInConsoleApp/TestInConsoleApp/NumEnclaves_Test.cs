@@ -67,12 +67,9 @@ namespace TestInConsoleApp
             {
                 for (int j = 1; j < colCount -1; j++)
                 {
-                    if (A[i][j] == 1 && IsNotEdge(i,j,rowCount,colCount))
+                    if (A[i][j] == 1)
                     {
-                        if (!passDict.ContainsKey(i * colCount + j))
-                        {
-                            count++;
-                        }
+                        count++;
                     }
                 }
             }
