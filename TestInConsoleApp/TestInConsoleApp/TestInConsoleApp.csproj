@@ -154,6 +154,7 @@
     <Compile Include="NextGreaterElement_Test.cs" />
     <Compile Include="NTree_LevelOrder.cs" />
     <Compile Include="NumArray.cs" />
+    <Compile Include="NumEnclaves_Test.cs" />
     <Compile Include="PriorityQueque.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
