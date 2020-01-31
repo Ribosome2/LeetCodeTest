@@ -29,7 +29,8 @@ namespace TestInConsoleApp
             {
                 int tempIndex = -1;
                 int tempRight = right;
-                for (int i = 0; i < clips.GetLength(0); i++)
+                int len = clips.GetLength(0);
+                for(int i = 0; i < len; i++)
                 {
                     var clip = clips[i];
                     //左右为-1标记为已经选取
