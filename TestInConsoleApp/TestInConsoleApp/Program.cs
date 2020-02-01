@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new VideoStitching_Test();
-            var arr = new int[][] {new []{0,2},new []{4,6},new []{8,10},new []{1,9},new []{1,5},new []{5,9}};
-            Console.WriteLine(test.VideoStitching(arr,10));
+            var test = new MaxSatisfied_Test();
+          
+            Console.WriteLine(test.MaxSatisfied(new []{1,0,1,2,1,1,7,5},new []{0,1,0,1,0,1,0,1},3));
             Console.ReadKey();
         }
 
