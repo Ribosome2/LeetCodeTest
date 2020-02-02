@@ -65,7 +65,39 @@ namespace TestInConsoleApp
 
             return count;
         }
-
+        public int MaxSatisfied1(int[] customers, int[] grumpy, int X)
+        {
+            var totalNum = 0;
+            int maxAddNum = 0;
+            int tempAddNum = 0;
+            int tempIndex = 0;
+            for (int i = 0; i < grumpy.Length; i++)
+            {
+                tempIndex++;
+                //不生气的时间内的人数直接累增
+                if (grumpy[i] == 0)
+                {
+                    totalNum += customers[i];
+                    customers[i] = 0;  //这是为了后面的滑动窗口直接可以减去左边的
+                }
+                else
+                {
+                    tempAddNum += customers[i];
+                }
+                //一个滑动窗口
+                if (tempIndex == X)
+                {
+                    maxAddNum = Math.Max(maxAddNum, tempAddNum);
+                    
+                    //满了一个滑动窗口之后，后面的每一次移动都是一个滑动窗口
+                    //后面的等于右边加的值减去左边加的值
+                    int leftIndex = i - X+1;
+                    tempAddNum -= customers[leftIndex];
+                    tempIndex--;
+                }
+            }
+            return totalNum+maxAddNum;
+        }
         int GetAddNum(ref int[] customers,ref  int[] grumpy,int index )
         {
             if (grumpy[index]==1) //只有生气的那一分钟改变可以增加满意人数

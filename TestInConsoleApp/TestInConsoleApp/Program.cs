@@ -14,7 +14,7 @@ namespace TestInConsoleApp
 
             var test = new MaxSatisfied_Test();
           
-            Console.WriteLine(test.MaxSatisfied(new []{1,0,1,2,1,1,7,5},new []{0,1,0,1,0,1,0,1},3));
+            Console.WriteLine(test.MaxSatisfied1(new []{1,0,1,2,1,1,7,5},new []{0,1,0,1,0,1,0,1},3));
             Console.ReadKey();
         }
 
