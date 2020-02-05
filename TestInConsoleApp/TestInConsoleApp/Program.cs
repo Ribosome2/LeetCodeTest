@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new LargestPerimeter_Test();
+            var test = new DeckRevealedIncreasing_Test();;
           
-            Console.WriteLine(test.LargestPerimeter(new []{2,1,2}));
+            Console.WriteLine(test.DeckRevealedIncreasing(new []{17,13,11,2,3,5,7}));
             Console.ReadKey();
         }
 
