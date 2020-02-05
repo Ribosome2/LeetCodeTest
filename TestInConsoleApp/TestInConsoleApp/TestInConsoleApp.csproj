@@ -106,6 +106,7 @@
     <Compile Include="FreqAlphabets_Test.cs" />
     <Compile Include="GenerateTowerTriangle.cs" />
     <Compile Include="GetMaximumGold_Test.cs" />
+    <Compile Include="HasGroupsSizeX_Test.cs" />
     <Compile Include="IncreasingBST_Test.cs" />
     <Compile Include="IntegerReplacement_Test.cs" />
     <Compile Include="Int_AddDigits.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="JudgeCircle.cs" />
     <Compile Include="KthLargest_Test.cs" />
+    <Compile Include="LargestPerimeter_Test.cs" />
     <Compile Include="LastStoneWeight_Test.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />

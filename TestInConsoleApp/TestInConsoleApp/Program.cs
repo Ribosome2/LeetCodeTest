@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new MaxSatisfied_Test();
+            var test = new LargestPerimeter_Test();
           
-            Console.WriteLine(test.MaxSatisfied1(new []{1,0,1,2,1,1,7,5},new []{0,1,0,1,0,1,0,1},3));
+            Console.WriteLine(test.LargestPerimeter(new []{2,1,2}));
             Console.ReadKey();
         }
 
