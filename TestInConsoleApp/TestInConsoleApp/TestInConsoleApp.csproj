@@ -130,6 +130,7 @@
     <Compile Include="IsBracketsValid.cs" />
     <Compile Include="IsCanWinNim.cs" />
     <Compile Include="IsCycleLinkList.cs" />
+    <Compile Include="IsLongPressedName_Test.cs" />
     <Compile Include="IsSameBinaryTree.cs" />
     <Compile Include="JudgeCircle.cs" />
     <Compile Include="KthLargest_Test.cs" />

@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new DeckRevealedIncreasing_Test();;
+            var test = new IsLongPressedName_Test();;
           
-            Console.WriteLine(test.DeckRevealedIncreasing(new []{17,13,11,2,3,5,7}));
+            Console.WriteLine(test.IsLongPressedName("alex","aaleex"));
             Console.ReadKey();
         }
 
