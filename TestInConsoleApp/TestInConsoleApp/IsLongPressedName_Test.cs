@@ -29,7 +29,7 @@ namespace TestInConsoleApp
                     {
                         flag = true;
                         typeIndex++;
-                        if (flag==false && nameIndex < name.Length - 1 && name[nameIndex + 1] == ch)
+                        if (nameIndex < name.Length - 1 && name[nameIndex + 1] == ch)
                         {
                             //下一个字符跟当前的一样，不再往下检查
                             break;
