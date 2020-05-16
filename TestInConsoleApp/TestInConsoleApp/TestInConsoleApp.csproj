@@ -102,6 +102,7 @@
     <Compile Include="DayOfTheWeek_Test.cs" />
     <Compile Include="DeckRevealedIncreasing_Test.cs" />
     <Compile Include="DistanceBetweenBusStops_Test.cs" />
+    <Compile Include="FindContinuousSequence.cs" />
     <Compile Include="FindLinkListIntersectNode.cs" />
     <Compile Include="FindRestaurantWithMinIndex.cs" />
     <Compile Include="FreqAlphabets_Test.cs" />

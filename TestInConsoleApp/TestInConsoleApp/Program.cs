@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new IsLongPressedName_Test();;
+            var test = new FindContinuousSequence_Test();;
           
-            Console.WriteLine(test.IsLongPressedName("alex","aaleex"));
+            Console.WriteLine(test.FindContinuousSequence(9));
             Console.ReadKey();
         }
 
