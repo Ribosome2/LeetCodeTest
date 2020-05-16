@@ -6,10 +6,9 @@ namespace TestInConsoleApp
     {
         public int[][] FindContinuousSequence(int target)
         {
-            int[][] result;
             int leftNumber = 1;
             int rightNumber = target;
-            List<int[]> arrList = new List<int[]>();
+            List<int> arrList = new List<int>();
             while (leftNumber<rightNumber)
             {
                 var sum = 0;
@@ -22,18 +21,31 @@ namespace TestInConsoleApp
                         int sequenceNum = curNumber - leftNumber+1;
                         if (sequenceNum > 1)
                         {
-                           var arr= MakeArray(sequenceNum, leftNumber);
-                            arrList.Add(arr);
+                            arrList.Add(leftNumber);
+                            arrList.Add(sequenceNum);
+                           
                         }
                         break;
                     }
                     curNumber++;
-                    
                 }
 
                 leftNumber++;
             }
-            return arrList.ToArray();
+
+            int count = arrList.Count / 2;
+            int[][] result= new int[count][];
+            int index = 0;
+            for (int  i = 0; i < count; i++)
+            {
+                int starNumber = arrList[index];
+                
+                int sequenceNum = arrList[index+1];
+                index+=2;
+                result[i] = MakeArray(sequenceNum, starNumber);
+            }
+
+            return result;
         }
 
         private static int[]  MakeArray(int sequenceNum, int leftNumber)
