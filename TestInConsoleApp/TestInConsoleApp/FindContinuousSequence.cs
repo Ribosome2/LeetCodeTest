@@ -23,9 +23,10 @@ namespace TestInConsoleApp
                         {
                             arrList.Add(leftNumber);
                             arrList.Add(sequenceNum);
-                           
                         }
                         break;
+
+                        //优化，得到了一个合适的区间之后可以使用滑动窗口优化一下后面的答案的搜索，避免重复求和
                     }
                     curNumber++;
                 }
@@ -44,7 +45,6 @@ namespace TestInConsoleApp
                 index+=2;
                 result[i] = MakeArray(sequenceNum, starNumber);
             }
-
             return result;
         }
 
