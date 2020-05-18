@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInConsoleApp", "TestInConsoleApp\TestInConsoleApp.csproj", "{8CA3E995-66C6-4277-A6C7-B5DC2DBAD6DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "剑指offer练习", "C:\Users\Administrator\source\repos\剑指offer练习\剑指offer练习\剑指offer练习.csproj", "{18F77265-A762-4CFE-A468-02195D2A1F4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8CA3E995-66C6-4277-A6C7-B5DC2DBAD6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CA3E995-66C6-4277-A6C7-B5DC2DBAD6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CA3E995-66C6-4277-A6C7-B5DC2DBAD6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F77265-A762-4CFE-A468-02195D2A1F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F77265-A762-4CFE-A468-02195D2A1F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F77265-A762-4CFE-A468-02195D2A1F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F77265-A762-4CFE-A468-02195D2A1F4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
