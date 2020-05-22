@@ -10,6 +10,15 @@ namespace 剑指Offer
     {
         static void Main(string[] args)
         {
+            int[][] arr = new int[][]
+            {
+                new int[]{1,4,7,11,15},
+                new int[] {2,5,8,12,19},
+                new int[] {3,6,9,16,22},
+                new int[] {18,21,23,26,30},
+            };
+            Console.WriteLine(new FindNumberIn2DArray_Test().FindNumberIn2DArray(arr,5));
+            Console.ReadKey();
         }
     }
 }

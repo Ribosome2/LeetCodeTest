@@ -62,18 +62,15 @@ namespace 剑指Offer
             for (int i = 0; i < nums.Length; i++)
             {
                 var number = nums[i];
-             
-
                 if (number == i)
                 {
-                    i++;
+                    continue;
                 }
-                else
-                {
-                    var temp = nums[number];
-                    nums[number] = number;
-                    nums[i] = temp;
-                }
+               
+                var temp = nums[number];
+                nums[number] = number;
+                nums[i] = temp;
+                
                 if (nums[number] == number)
                 {
                     return number;
