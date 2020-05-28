@@ -21,25 +21,17 @@ namespace 剑指Offer
                     var ch = s[rightIndex];
                     if (record.TryGetValue(ch, out var repeatIndex))
                     {
-                        if (repeatIndex >= 0)
+                        while (leftIndex<=repeatIndex)
                         {
-                            while (leftIndex<=repeatIndex)
-                            {
-                                var leftCh = s[leftIndex];
-                                record[leftCh] = -1;
-                                leftIndex++;
-                            }
-                        }
-                        else
-                        {
-                            maxLen = Math.Max(rightIndex - leftIndex+1, maxLen);
+                            var leftCh = s[leftIndex];
+                            record.Remove(leftCh);
+                            leftIndex++;
                         }
                     }
                     else
                     {
                         maxLen = Math.Max(rightIndex - leftIndex+1, maxLen);
                     }
-
                     record[ch] = rightIndex;
                     rightIndex++;
                 }
