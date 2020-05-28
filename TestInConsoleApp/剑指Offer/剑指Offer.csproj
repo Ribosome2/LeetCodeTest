@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="FindNumberIn2DArray_Test.cs" />
     <Compile Include="FindRepeatNumber_Test.cs" />
+    <Compile Include="GetKthFromEnd_Test.cs" />
+    <Compile Include="LengthOfLongestSubstring_Test.cs" />
+    <Compile Include="ListNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

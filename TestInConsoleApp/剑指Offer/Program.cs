@@ -17,7 +17,7 @@ namespace 剑指Offer
                 new int[] {3,6,9,16,22},
                 new int[] {18,21,23,26,30},
             };
-            Console.WriteLine(new FindNumberIn2DArray_Test().FindNumberIn2DArray(arr,5));
+            Console.WriteLine(new LengthOfLongestSubstring_Test().LengthOfLongestSubstring("abcabcbb"));
             Console.ReadKey();
         }
     }
