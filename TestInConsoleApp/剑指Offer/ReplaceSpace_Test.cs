@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace 剑指Offer
 {
@@ -25,6 +26,28 @@ namespace 剑指Offer
                 }
             }
             return sb.ToString();
+        }
+
+        public string ReplaceSpace2(string s)
+        {
+            //由于空格变%20是一个字符变三个，最大的需要字符长度乘3个字符
+            var chArr = new Char[s.Length * 3];
+            int index = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                var ch = s[i];
+                if (ch == ' ')
+                {
+                    chArr[index++] = '%';
+                    chArr[index++] = '2';
+                    chArr[index++] = '0';
+                }
+                else
+                {
+                    chArr[index++] = ch;
+                }
+            }
+            return new string(chArr,0,index);
         }
     }
 }
