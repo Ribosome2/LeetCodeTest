@@ -15,5 +15,21 @@ namespace 剑指Offer
             }
             return stack.ToArray();
         }
+
+        public int[] ReversePrint2(ListNode head)
+        {
+            Stack<int> stack = new Stack<int>();
+            while (head != null)
+            {
+                stack.Push(head.val);
+                head = head.next;
+            }
+            int[] arr = new int[stack.Count];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = stack.Pop();
+            }
+            return arr;
+        }
     }
 }
