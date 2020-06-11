@@ -17,7 +17,7 @@ namespace 剑指Offer
                 new int[] {3,6,9,16,22},
                 new int[] {18,21,23,26,30},
             };
-            Console.WriteLine(new LengthOfLongestSubstring_Test().LengthOfLongestSubstring("abcabcbb"));
+            Console.WriteLine(new MajorityElement_Test().MajorityElement1(new int[]{ 1, 2, 3, 2, 2, 2, 5, 4, 2 }));
             Console.ReadKey();
         }
     }
