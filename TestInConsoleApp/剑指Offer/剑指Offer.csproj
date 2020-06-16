@@ -47,6 +47,7 @@
     <Compile Include="FindNumberIn2DArray_Test.cs" />
     <Compile Include="FindRepeatNumber_Test.cs" />
     <Compile Include="GetKthFromEnd_Test.cs" />
+    <Compile Include="InvokeMethodWith_OUT_KeyWord.cs" />
     <Compile Include="LengthOfLongestSubstring_Test.cs" />
     <Compile Include="LinkListReversePrint_Test.cs" />
     <Compile Include="ListNode.cs" />
