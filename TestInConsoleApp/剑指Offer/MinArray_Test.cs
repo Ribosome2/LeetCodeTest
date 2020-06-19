@@ -26,38 +26,28 @@ namespace 剑指Offer
                 return Math.Min(numbers[0], numbers[1]);
             }
             //在数组头和尾选两个指针，如果左指针大于右指针，我们就可以判断旋转的分解线
-            int leftIndex = 1;
-            int rightIndex = numbers.Length - 1;
-            int mid = leftIndex;
-           
-            while (leftIndex<rightIndex)
+            int left = 0;
+            int right = numbers.Length - 1;
+            while (left<right)
             {
-                if (numbers[mid - 1] > numbers[mid])
+                int mid = (right + left) / 2;
+                if (numbers[mid] == numbers[right])
                 {
-                    return numbers[mid];
+                    right--;
                 }
-
-                if (numbers[mid] > numbers[mid + 1])
-                {
-
-                }
-
-
-
                 else
                 {
-                    if (numbers[mid] >= numbers[0])
+                    if (numbers[mid] > numbers[right])
                     {
-                        leftIndex = mid + 1;
+                        left = mid + 1;
                     }
                     else
                     {
-                        rightIndex = mid - 1;
+                        right = mid - 1;
                     }
                 }
-                mid = (rightIndex + leftIndex) / 2;
             }
-            return numbers[0];
+            return numbers[left];
         }
 
         public int MinArraySimpleMind(int[] numbers)
