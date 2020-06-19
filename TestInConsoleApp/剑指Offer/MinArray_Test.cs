@@ -16,16 +16,7 @@ namespace 剑指Offer
                 return 0;
             }
 
-            if (numbers.Length == 1)
-            {
-                return numbers[0];
-            }
-
-            if (numbers.Length == 2)
-            {
-                return Math.Min(numbers[0], numbers[1]);
-            }
-            //在数组头和尾选两个指针，如果左指针大于右指针，我们就可以判断旋转的分解线
+            //这里注意要分析，中间值和左边值对比的时候并不能减治，需要跟右边值对比
             int left = 0;
             int right = numbers.Length - 1;
             while (left<right)
@@ -43,7 +34,7 @@ namespace 剑指Offer
                     }
                     else
                     {
-                        right = mid - 1;
+                        right = mid ;  //这里是关键，不要减1
                     }
                 }
             }
