@@ -12,10 +12,14 @@ namespace 剑指Offer
         {
 
             Console.WriteLine("offer !!!!!!!!");
-            var arr = new int[] {1, 3, -1, -3, 5, 3, 6, 7};
-            new MaxSlidingWindow_Test().MaxSlidingWindow(arr,3);
-
-
+            var test = new SpiralOrder_Test();
+            var arr = new int[][]
+            {
+               new [] {1, 2, 3, 4},
+                new [] {5, 6, 7, 8},
+                new[] { 9, 10, 11, 12},
+            };
+            test.SpiralOrder(arr);
             Console.ReadKey();
         }
     }
