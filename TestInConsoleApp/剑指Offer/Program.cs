@@ -12,7 +12,8 @@ namespace 剑指Offer
         {
 
             Console.WriteLine("offer !!!!!!!!");
-            new InvokeMethodWith_OUT_KeyWord();
+            var arr = new int[] {1, 3, -1, -3, 5, 3, 6, 7};
+            new MaxSlidingWindow_Test().MaxSlidingWindow(arr,3);
 
 
             Console.ReadKey();

@@ -52,6 +52,7 @@
     <Compile Include="LinkListReversePrint_Test.cs" />
     <Compile Include="ListNode.cs" />
     <Compile Include="MajorityElement_Test.cs" />
+    <Compile Include="MaxSlidingWindow_Test.cs" />
     <Compile Include="MinArray_Test.cs" />
     <Compile Include="MinStack_Test.cs" />
     <Compile Include="Program.cs" />
