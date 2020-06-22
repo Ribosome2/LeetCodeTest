@@ -227,6 +227,7 @@
     <Compile Include="Tree_SumNumbers.cs" />
     <Compile Include="Trie.cs" />
     <Compile Include="TwoCitySchedCost_Test.cs" />
+    <Compile Include="UniquePaths_Test.cs" />
     <Compile Include="VideoStitching_Test.cs" />
     <Compile Include="WordDictionary.cs" />
   </ItemGroup>

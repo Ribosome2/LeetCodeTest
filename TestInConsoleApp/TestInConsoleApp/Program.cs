@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new FindContinuousSequence_Test();;
+            var test = new UniquePaths_Test();;
           
-            Console.WriteLine(test.FindContinuousSequence(9));
+            Console.WriteLine(test.UniquePaths(51,9));
             Console.ReadKey();
         }
 
