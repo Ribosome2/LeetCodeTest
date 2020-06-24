@@ -26,11 +26,39 @@
             result[2] = 4;
             for (int i = 3; i < n; i++)
             {
-                result[i] = result[i - 1] + result[i - 2] + result[i - 3];
-                result = result % 1000000007;
+                result[i] = (result[i - 1] + result[i - 2]) % 1000000007 + result[i - 3];
+                //这里三个数相加，第二个不取模的话加第三个数就会数值溢出了
+                result[i] = result[i] % 1000000007;
             }
 
             return result[n-1];
+
+        }
+
+        public int WaysToStep1(int n)
+        {
+            if (n<=2)
+            {
+                return n;
+            }
+            else if (n == 3)
+            {
+                return 4;
+            }
+
+           
+            //因为每次相加只跟前三个数有关系，所以，可以不用数组存
+            int first = 1;
+            int second = 2;
+            int third = 4;
+            for (int i = 3; i < n; i++)
+            {
+                result[i] = (result[i - 1] + result[i - 2]) % 1000000007 + result[i - 3];
+                //这里三个数相加，第二个不取模的话加第三个数就会数值溢出了
+                result[i] = result[i] % 1000000007;
+            }
+
+            return result[n - 1];
 
         }
     }
