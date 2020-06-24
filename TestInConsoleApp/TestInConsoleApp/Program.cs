@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new UniquePaths_Test();;
+            var test = new MinCostClimbingStairs_Test();
           
-            Console.WriteLine(test.UniquePaths(51,9));
+            Console.WriteLine(test.MinCostClimbingStairs(new int[]{0,0,0,0}));
             Console.ReadKey();
         }
 
