@@ -7,8 +7,6 @@ namespace TestInConsoleApp
     {
         public int MaxScore(int[] cardPoints, int k)
         {
-            //F(m,n)=max(a[m]+f(m+1), a[n]+ f(n-1)
-            //当m==n 或(m-n)==1 是边界条件
             int result = 0;
             if (k >= cardPoints.Length)
             {
@@ -19,7 +17,7 @@ namespace TestInConsoleApp
             }
             else
             {
-                //考虑k左右分配的问题
+                //考虑k左右分配的问题  本质上是个滑动窗口
                 //sum(k)= sum(left)+sum(k-left)
                 int max = 0;
                 int leftSum = 0;
@@ -41,6 +39,19 @@ namespace TestInConsoleApp
             return result;
         }
 
-      
+        public int MaxScore1(int[] cardPoints, int k)
+        {
+            int result = 0;
+            int max = 0;
+            for (int i = 0; i < k; i++)
+            {
+                result += cardPoints[i];
+            }
+            //滑动窗口法：左右加起来的窗口长度等于1就行
+            x
+            return max;
+        }
+
+
     }
 }
