@@ -12,9 +12,9 @@ namespace TestInConsoleApp
         static void Main(string[] args)
         {
 
-            var test = new MinCostClimbingStairs_Test();
+            var test = new MaxScore_Test();
           
-            Console.WriteLine(test.MinCostClimbingStairs(new int[]{0,0,0,0}));
+            Console.WriteLine(test.MaxScore(new int[]{1,2,3,4,5,6,1},3));
             Console.ReadKey();
         }
 

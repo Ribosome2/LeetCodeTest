@@ -150,6 +150,7 @@
     <Compile Include="MatrixTranspose.cs" />
     <Compile Include="MaxNumberOfBalloons_Test.cs" />
     <Compile Include="MaxSatisfied_Test.cs" />
+    <Compile Include="MaxScore_Test.cs" />
     <Compile Include="MaxTreeDepth.cs" />
     <Compile Include="MaxUncrossedLines_Test.cs" />
     <Compile Include="MinCostClimbingStairs_Test.cs" />
