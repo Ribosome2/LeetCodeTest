@@ -39,19 +39,5 @@ namespace TestInConsoleApp
             return result;
         }
 
-        public int MaxScore1(int[] cardPoints, int k)
-        {
-            int result = 0;
-            int max = 0;
-            for (int i = 0; i < k; i++)
-            {
-                result += cardPoints[i];
-            }
-            //滑动窗口法：左右加起来的窗口长度等于1就行
-            x
-            return max;
-        }
-
-
     }
 }
