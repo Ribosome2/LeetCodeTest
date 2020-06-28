@@ -147,6 +147,7 @@
     <Compile Include="LongestCommonPrefix.cs" />
     <Compile Include="LongestPalindrome_Test.cs" />
     <Compile Include="LRUCache.cs" />
+    <Compile Include="Massage_Test.cs" />
     <Compile Include="MatrixTranspose.cs" />
     <Compile Include="MaxNumberOfBalloons_Test.cs" />
     <Compile Include="MaxSatisfied_Test.cs" />
