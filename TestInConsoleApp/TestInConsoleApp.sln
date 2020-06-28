@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInConsoleApp", "TestInC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "剑指Offer", "剑指Offer\剑指Offer.csproj", "{B029A987-7457-46D6-BE0A-AD88161ED7A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "程序员面试金典", "程序员面试金典\程序员面试金典.csproj", "{30D49736-5C0E-41C9-8450-BED732A83C3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B029A987-7457-46D6-BE0A-AD88161ED7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B029A987-7457-46D6-BE0A-AD88161ED7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B029A987-7457-46D6-BE0A-AD88161ED7A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D49736-5C0E-41C9-8450-BED732A83C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D49736-5C0E-41C9-8450-BED732A83C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D49736-5C0E-41C9-8450-BED732A83C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D49736-5C0E-41C9-8450-BED732A83C3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
