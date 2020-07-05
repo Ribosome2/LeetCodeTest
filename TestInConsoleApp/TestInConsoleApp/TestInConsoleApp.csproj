@@ -157,6 +157,7 @@
     <Compile Include="MinCostClimbingStairs_Test.cs" />
     <Compile Include="MinDeletionSize_Test.cs" />
     <Compile Include="MinStack.cs" />
+    <Compile Include="MinSteps_Test.cs" />
     <Compile Include="MinSubArrayLen_Test.cs" />
     <Compile Include="MinTimeToVisitAllPoints_Test.cs" />
     <Compile Include="MinTreeDepth.cs" />
