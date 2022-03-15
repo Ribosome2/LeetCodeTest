@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Assets.Scripts;
+using TestInConsoleApp.LinkList;
 
 namespace TestInConsoleApp
 {
@@ -11,14 +12,10 @@ namespace TestInConsoleApp
     {
         static void Main(string[] args)
         {
-
-            var test = new MaxScore_Test();
-          
-            Console.WriteLine(test.MaxScore(new int[]{1,2,3,4,5,6,1},3));
+            LinkedList_Reverse test = new LinkedList_Reverse();
+            test.TestReverseLinkList();
             Console.ReadKey();
         }
-
-
        
     }
 }

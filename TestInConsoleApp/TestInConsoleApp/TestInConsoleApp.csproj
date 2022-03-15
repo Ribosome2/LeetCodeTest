@@ -139,6 +139,7 @@
     <Compile Include="LastStoneWeight_Test.cs" />
     <Compile Include="LinkListMerge.cs" />
     <Compile Include="LinkListRemoveElement.cs" />
+    <Compile Include="LinkList\LinkedList_Reverse.cs" />
     <Compile Include="LinkList_DeleteDuplicates.cs" />
     <Compile Include="LinkList_MiddleNode.cs" />
     <Compile Include="LinkList_RemoveDuplicate.cs" />
@@ -239,5 +240,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
