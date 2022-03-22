@@ -132,12 +132,53 @@ namespace CustomData
             {
                 int i = FindEntry(key);
                 if (i >= 0) return entries[i].value;
+                throw new KeyNotFoundException("key not exist " + key);
                 return default(TValue);
             }
             set
             {
                 Insert(key,value,false);
             }
+        }
+
+        public bool Remove(TKey key)
+        {
+            if (buckets != null)
+            {
+                int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
+                int bucket = hashCode % buckets.Length;
+                int last = -1;
+                for (int i = buckets[bucket]; i >= 0; last = 0, i = entries[i].next)
+                {
+                    if (entries[i].hashCode == hashCode && comparer.Equals(entries[i].key, key))
+                    {
+                        if (last < 0)
+                        {
+                            buckets[bucket] = entries[i].next;
+                        }
+                        else
+                        {
+                            entries[last].next = entries[i].next;
+                        }
+
+                        entries[i].hashCode = -1;
+                        entries[i].next = freeList;
+                        entries[i].value = default(TValue);
+                        entries[i].key = default(TKey);
+                        freeList = i;
+                        freeCount++;
+                        version++;
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public bool ContainsKey(TKey key)
+        {
+            return FindEntry(key)>=0;
         }
 
         private void Resize()
