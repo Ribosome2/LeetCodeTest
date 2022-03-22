@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Collections;
 
 namespace CustomData
 {
-    public class KyleDictionary
+    public class KyleDictionary<TKey, TValue> 
     {
-
         private struct Entry
         {
             public int hashCode;
@@ -22,6 +22,32 @@ namespace CustomData
         private int freeCount;
         private int version;
         private IEqualityComparer<TKey> comparer;
+
+        public KyleDictionary()
+        {
+            this.comparer = EqualityComparer<TKey>.Default;
+            Initialize(1);
+        }
+
+        //这里我们只是简单的翻倍，不做质数逻辑
+        int GetPrime(int capacity)
+        {
+            if (capacity <= 0)
+            {
+                capacity = 1;
+            }
+
+            return capacity * 2;
+        }
+
+        private void Initialize(int capacity)
+        {
+            int size = GetPrime(capacity);
+            buckets= new int[size];
+            for (int i = 0; i < buckets.Length; i++) buckets[i] = -1;
+            entries =new Entry[size];
+            freeList =- 1;
+        }
 
         private void Insert(TKey key, TValue value, bool add)
         {
@@ -79,18 +105,74 @@ namespace CustomData
             buckets[targetBucket] = index;
         }
 
+        private int FindEntry(TKey key)
+        {
+            if (key == null)
+            {
+                throw new ArgumentNullException("key 不能为空 ");
+            }
+
+            if (buckets != null)
+            {
+                int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
+                for (int i = buckets[hashCode % buckets.Length]; i >= 0; i = entries[i].next)
+                {
+                    if (entries[i].hashCode == hashCode && comparer.Equals(entries[i].key, key))
+                    {
+                        return i;
+                    }
+                }
+            }
+            return -1;
+        }
+
+        public TValue this[TKey key]
+        {
+            get
+            {
+                int i = FindEntry(key);
+                if (i >= 0) return entries[i].value;
+                return default(TValue);
+            }
+            set
+            {
+                Insert(key,value,false);
+            }
+        }
+
         private void Resize()
         {
-            
+            int newSize = count * 2; //这里我们不用质数，直接翻倍
+            int[] newBuckets = new int[newSize];
+            //reset all bucket to -1
+            for (int i = 0; i < newBuckets.Length; i++)
+            {
+                newBuckets[i] = -1;
+            }
+            Entry[] newEntries =new Entry[newSize];
+            Array.Copy(entries,0,newEntries,0,count);
+
+            for (int i = 0; i < count; i++)
+            {
+                if (newEntries[i].hashCode >= 0)
+                {
+                    int bucket = newEntries[i].hashCode % newSize;
+                    newEntries[i].next = newBuckets[bucket];
+                    newBuckets[bucket] = i;
+                }
+            }
+
+            buckets = newBuckets;
+            entries = newEntries;
         }
     }
 
 
-    internal interface TKey
+    public  interface TKey
     {
     }
 
-    internal interface TValue
+    public  interface TValue
     {
     }
 
