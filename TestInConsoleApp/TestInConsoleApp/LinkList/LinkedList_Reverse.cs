@@ -61,6 +61,27 @@ namespace TestInConsoleApp.LinkList
             return root;
         }
 
+        static  LinkNode ReverseAtPlace(LinkNode root)
+        {
+            if (root == null || root.Next == null)
+            {
+                return root;
+            }
+
+            var prev = root;
+            var next = root.Next;
+            prev.Next = null;
+            while (next!=null)
+            {
+                var temp = next.Next;
+                next.Next = prev;
+                prev = next;
+                next = temp;
+            }
+
+            return prev;
+        }
+
         public void TestReverseLinkList()
         {
             LinkNode root = new LinkNode()
@@ -85,7 +106,8 @@ namespace TestInConsoleApp.LinkList
                 }
             };
             PrintLinkList(root);
-            var reverseLinkList = ReverseLinkList(root);
+//            var reverseLinkList = ReverseLinkList(root);
+            var reverseLinkList = ReverseAtPlace(root);
             PrintLinkList(reverseLinkList);
         }
     }
